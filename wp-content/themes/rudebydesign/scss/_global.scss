@@ -1,0 +1,107 @@
+html {
+	background-color: var(--c-white);
+	scroll-behavior: smooth;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.inner-wrapper {
+	max-width: 1376px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 var(--scale-16-32);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+a {
+	width: fit-content;
+}
+
+.readable-content {
+	max-width: var(--max-readable-width);
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.card {
+	border-radius: var(--border-radius-med);
+	box-shadow: var(--box-shadow-card);
+	background: var(--c-white);
+	min-width: fit-content;
+}
+
+.button {
+	padding: var(--scale-16-24) var(--scale-16-32);
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--box-shadow-button);
+	color: var(--c-white);
+	border: 1px solid var(--c-grey);
+	background-color: var(--c-nearly-black);
+
+	&.small {
+		padding: var(--scale-8-16) var(--scale-16-32);
+	}
+
+	&.primary {
+		color: var(--c-white);
+		background: linear-gradient(0deg, rgba(10, 97, 1, 0.6) 0%, rgba(10, 97, 1, 0) 100%);
+		background-color: var(--c-green);
+		border-color: var(--c-green);
+
+		&:hover,
+		&:focus {
+			background: linear-gradient(0deg, rgba(10, 97, 1, 1) 0%, rgba(10, 97, 1, 0) 100%);
+			background-color: var(--c-green);
+		}
+	}
+
+	&.secondary {
+		color: var(--c-white);
+		background: linear-gradient(0deg, rgba(160, 48, 0, 0.6) 0%, rgba(160, 48, 0, 0) 100%);
+		background-color: var(--c-orange-medium);
+		border-color: var(--c-orange-medium);
+
+		&:hover,
+		&:focus {
+			background: linear-gradient(0deg, rgba(160, 48, 0, 1) 0%, rgba(160, 48, 0, 0) 100%);
+			background-color: var(--c-orange-medium);
+		}
+	}
+
+	&.outline {
+		padding: var(--s-16) var(--scale-16-32);
+		display: flex;
+		gap: var(--s-16);
+		align-items: center;
+		background-color: var(--c-white);
+		color: var(--c-nearly-black);
+
+		svg {
+			width: var(--s-24);
+			height: var(--s-24);
+		}
+
+		&:hover,
+		&:focus {
+			background: var(--c-white);
+		}
+	}
+}
+
+.coloured-text {
+	color: var(--c-orange);
+}
