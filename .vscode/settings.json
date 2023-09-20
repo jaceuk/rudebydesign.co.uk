@@ -7,7 +7,7 @@
     }
   ],
   "liveSassCompile.settings.includeItems": [
-    "**/wp-content/themes/rude-by-design/sass/style.scss"
+    "**/wp-content/themes/rude-by-design/scss/style.scss"
   ],
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": null
