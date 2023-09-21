@@ -12,13 +12,12 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
+<footer>
 	<div class="inner-wrapper">
 		<a href="/sample-page">Sample page</a>
 		<a href="/checkout">Checkout</a>
 	</div>
 </footer>
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
