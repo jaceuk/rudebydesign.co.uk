@@ -1,0 +1,55 @@
+.header {
+  box-shadow: var(--box-shadow-menu);
+  padding: var(--scale-16-32) 0;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--scale-16-32);
+
+    &.bottom {
+      padding-top: var(--scale-16-32);
+    }
+  }
+
+  svg {
+    height: 55px;
+  }
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  label {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.menu {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--scale-16-32);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+}
+
+nav button {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
