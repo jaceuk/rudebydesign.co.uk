@@ -25,14 +25,12 @@
 <body>
 	<header>
 		<div class="inner-wrapper">
-			<div>
-				<a href="<?php echo esc_url(home_url('/')); ?>" rel="home" aria-label="Home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="" /></a>
-			</div>
+			<a href="<?php echo esc_url(home_url('/')); ?>" rel="home" aria-label="Home"><img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="" /></a>
 
 			<nav>
 				<button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'rude-by-design'); ?></button>
 
-				<div>
+				<div id="primary-menu">
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/shop">Shop</a></li>
