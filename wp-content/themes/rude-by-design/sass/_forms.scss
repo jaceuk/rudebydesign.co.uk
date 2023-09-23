@@ -1,0 +1,37 @@
+form {
+  input,
+  select,
+  textarea {
+    padding: var(--scale-8-16);
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--c-grey-med);
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'%3E%3Cpath d='M480-360 280-560h400L480-360Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 2rem;
+  }
+}
+
+.search-form {
+  border: 2px solid var(--c-accent);
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+
+  input {
+    font-weight: var(--fw-regular);
+    border: none;
+
+    &[type='search'] {
+      border-radius: 0;
+    }
+
+    &[type='submit'] {
+      background: transparent;
+      color: var(--c-white);
+    }
+  }
+}

@@ -204,3 +204,14 @@ function disable_woo_commerce_sidebar()
 	remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 }
 add_action('init', 'disable_woo_commerce_sidebar');
+
+// remove product meta from single product page
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+// remove additional information tab from single product page
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+function woo_remove_product_tabs($tabs)
+{
+	unset($tabs['additional_information']);
+	return $tabs;
+}

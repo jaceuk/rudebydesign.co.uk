@@ -4,10 +4,15 @@
 
 .products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: var(--scale-16-32);
-  margin: var(--scale-16-32) 0 var(--scale-32-64) 0;
+  padding: var(--scale-16-32) 0 var(--scale-32-64) 0;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   .woocommerce-LoopProduct-link {
     display: block;
@@ -27,6 +32,7 @@
       width: 100%;
       height: fit-content;
       border: 1px solid var(--c-grey-pale);
+      border-radius: var(--border-radius-small);
     }
 
     a {
@@ -51,8 +57,8 @@
   display: inline-block;
 }
 
-.woocommerce-ordering {
-  float: right;
+.woocommerce-result-count {
+  margin: 0 var(--scale-16-32) var(--scale-16-32) 0;
 }
 
 .page-numbers {
@@ -74,17 +80,17 @@
 
 .product-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   gap: var(--scale-16-32);
+  margin-bottom: var(--scale-16-32);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 
   .image {
     width: 100%;
-  }
-
-  a {
-    display: flex;
-    align-items: flex-start;
   }
 
   img {
@@ -92,13 +98,75 @@
     aspect-ratio: 1/1;
     object-fit: contain;
     height: fit-content;
+    border-radius: var(--border-radius-small);
   }
 
   .summary {
     width: 100%;
+    display: grid;
+    gap: var(--scale-16-32);
+
+    h1 {
+      font-size: var(--fs-h2);
+    }
+
+    .price {
+      font-size: var(--fs-h4);
+    }
+
+    .variations {
+      tr {
+        display: flex;
+        gap: var(--s-8);
+        align-items: center;
+      }
+
+      .value {
+        display: flex;
+        gap: var(--s-8);
+        align-items: center;
+      }
+    }
+
+    .variations_form,
+    .single_variation_wrap,
+    .woocommerce-variation-add-to-cart {
+      display: grid;
+      gap: var(--scale-8-16);
+    }
+
+    .single_variation_wrap {
+      .price {
+        font-weight: var(--fw-semi-bold);
+      }
+    }
+
+    .woocommerce-variation-add-to-cart {
+      display: grid;
+      gap: var(--scale-8-16);
+
+      button {
+        width: fit-content;
+      }
+    }
+
+    .reset_variations {
+      text-decoration: underline;
+    }
+
+    select[name='attribute_pa_size'] {
+      padding-right: var(--s-32);
+    }
   }
 }
 
 .button.wc-backward {
   display: block;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
 }

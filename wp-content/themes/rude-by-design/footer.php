@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
 	<div class="inner-wrapper">
 		<a href="/sample-page">Sample page</a>
 		<a href="/checkout">Checkout</a>
