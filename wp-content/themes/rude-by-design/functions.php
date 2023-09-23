@@ -132,3 +132,50 @@ require get_template_directory() . '/inc/template-tags.php';
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// change added to cart message
+function custom_add_to_cart_message_html($message, $products)
+{
+	$count = 0;
+	foreach ($products as $product_id => $qty) {
+		$count += $qty;
+	}
+	// The custom message is just below
+	$added_text = sprintf(
+		_n("%s item has %s", "%s items have %s", $count, "woocommerce"),
+		$count,
+		__("been added to your basket.", "woocommerce")
+	);
+
+	// added to cart success message
+	if ('yes' === get_option('woocommerce_cart_redirect_after_add')) {
+		$return_to = apply_filters('woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect(wc_get_raw_referer(), false) : wc_get_page_permalink('shop'));
+		$message   = sprintf('<a href="%s" class="button wc-forward">%s</a> %s', esc_url($return_to), esc_html__('Continue shopping', 'woocommerce'), esc_html($added_text));
+	} else {
+		$message   = sprintf('<a href="%s" class="button wc-forward">%s</a> %s', esc_url(wc_get_page_permalink('cart')), esc_html__('View cart', 'woocommerce'), esc_html($added_text));
+	}
+	return $message;
+}
+add_filter('wc_add_to_cart_message_html', 'custom_add_to_cart_message_html', 10, 2);
+
+// change variabe price format
+function change_variable_products_price_display($price, $product)
+{
+
+	// Only for variable products type
+	if (!$product->is_type('variable')) return $price;
+
+	$prices = $product->get_variation_prices(true);
+
+	if (empty($prices['price']))
+		return apply_filters('woocommerce_variable_empty_price_html', '', $product);
+
+	$min_price = current($prices['price']);
+	$max_price = end($prices['price']);
+	$prefix_html = '<span class="price-prefix">' . __('From ') . '</span>';
+
+	$prefix = $min_price !== $max_price ? $prefix_html : ''; // HERE the prefix
+
+	return apply_filters('woocommerce_variable_price_html', $prefix . wc_price($min_price) . $product->get_price_suffix(), $product);
+}
+add_filter('woocommerce_get_price_html', 'change_variable_products_price_display', 10, 2);

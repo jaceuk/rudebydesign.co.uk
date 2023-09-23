@@ -23,7 +23,7 @@ function rude_by_design_woocommerce_setup()
 		'woocommerce',
 		array(
 			'thumbnail_image_width' => 300,
-			'single_image_width'    => 600,
+			'single_image_width'    => 800,
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
