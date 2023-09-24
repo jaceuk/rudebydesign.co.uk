@@ -83,7 +83,7 @@
   --transition: 0.2s ease;
   --box-shadow-card: 0px 11px 48px 0px rgba(0, 0, 0, 0.15);
   --box-shadow-menu: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
-  --box-shadow-button: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  --box-shadow-button: 0px 4px 4px 0px var(--c-button-border);
   --border-radius-med: var(--scale-8-16);
   --border-radius-small: var(--scale-4-8);
   --border-radius-extra-small: var(--s-4);

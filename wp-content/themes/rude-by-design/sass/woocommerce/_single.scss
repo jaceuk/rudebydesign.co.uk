@@ -61,7 +61,7 @@
       .woocommerce-variation-add-to-cart {
         display: grid;
         gap: var(--scale-8-16);
-        width: 20.6rem;
+        width: 100%;
 
         @media (min-width: 768px) {
           width: 25.8rem;
@@ -83,13 +83,9 @@
       .button[type='submit'] {
         color: var(--c-nearly-black);
         background-color: var(--c-primary-button);
-        border: 2px solid rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--c-button-border);
         border-radius: 500px;
-
-        &:hover,
-        &:focus {
-          background-color: var(--c-primary-button);
-        }
+        padding: var(--scale-16-24);
       }
     }
   }
@@ -100,8 +96,11 @@
     gap: var(--scale-16-32);
     margin-bottom: var(--scale-32-64);
     max-width: var(--max-readable-width);
-    grid-column-start: 1;
-    grid-column-end: 3;
+
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
 
     .tabs {
       display: flex;
@@ -198,8 +197,11 @@
   .related.products {
     display: grid;
     gap: var(--scale-16-32);
-    grid-column-start: 1;
-    grid-column-end: 3;
+
+    @media (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
 
     .products {
       display: grid;
