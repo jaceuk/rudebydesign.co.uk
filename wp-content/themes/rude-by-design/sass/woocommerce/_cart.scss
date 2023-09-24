@@ -1,7 +1,5 @@
 // cart page
 .woocommerce {
-  margin-bottom: var(--scale-32-64);
-
   .woocommerce-info {
     background: var(--c-accent-pale);
     border: 1px solid var(--c-button-border);
@@ -132,6 +130,7 @@
         position: absolute;
         top: 1.6rem;
         right: -0.8rem;
+        text-decoration: none;
 
         @media (min-width: 768px) {
           position: static;
@@ -140,7 +139,7 @@
     }
 
     input.qty {
-      width: 6.4rem;
+      width: 7.2rem;
     }
   }
 
@@ -161,6 +160,10 @@
       gap: var(--scale-16-32);
       width: fit-content;
       margin: 0 0 0 auto;
+
+      h2 {
+        margin: 0;
+      }
 
       table {
         width: fit-content;
@@ -188,10 +191,6 @@
           td {
             display: grid;
             gap: var(--scale-8-16);
-          }
-
-          a {
-            text-decoration: underline;
           }
         }
       }

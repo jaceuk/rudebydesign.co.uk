@@ -15,10 +15,12 @@ Version: 1.0.0
 
 @import 'buttons';
 @import 'forms';
+@import 'page';
 @import 'global';
 
 @import 'woocommerce/archive';
 @import 'woocommerce/single';
 @import 'woocommerce/cart';
 @import 'woocommerce/checkout';
+@import 'woocommerce/account';
 @import 'woocommerce/common';

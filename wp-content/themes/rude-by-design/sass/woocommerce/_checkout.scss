@@ -53,13 +53,8 @@ form.woocommerce-checkout {
     grid-column-start: 1;
     grid-column-end: span 2;
   }
-}
 
-.form-row {
-  display: grid;
-  gap: var(--scale-8-16);
-
-  input {
+  input:not([type='checkbox']) {
     width: 100%;
   }
 }
@@ -157,4 +152,9 @@ form.woocommerce-checkout {
     text-align: center;
     padding: var(--scale-16-24);
   }
+}
+
+.place-order {
+  display: grid;
+  gap: var(--scale-16-32);
 }

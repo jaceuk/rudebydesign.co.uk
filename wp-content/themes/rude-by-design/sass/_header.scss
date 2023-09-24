@@ -3,6 +3,11 @@
   padding: var(--scale-16-32) 0;
   background: var(--c-nearly-black);
   position: relative;
+  margin-bottom: var(--scale-16-32);
+
+  a {
+    text-decoration: none;
+  }
 
   .inner-wrapper {
     display: grid;
@@ -99,6 +104,7 @@
     gap: var(--s-4);
     font-weight: var(--fw-semi-bold);
     color: var(--c-white);
+    position: relative;
 
     svg {
       fill: var(--c-accent);
@@ -112,4 +118,18 @@ nav button {
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.badge {
+  background: red;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  font-size: var(--fs-tiny);
+  text-align: center;
+  line-height: 1.4rem;
+  position: absolute;
+  padding-top: 0.2rem;
+  top: 0;
+  right: 0;
 }

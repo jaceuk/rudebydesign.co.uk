@@ -1,4 +1,7 @@
 form {
+  display: grid;
+  gap: var(--scale-16-32);
+
   input,
   select,
   textarea {
@@ -38,7 +41,8 @@ input[type='submit'] {
   outline-offset: -2px;
 }
 
-input[type='checkbox'] {
+input[type='checkbox'],
+input[type='radio'] {
   width: 2.4rem;
   height: 2.4rem;
 }

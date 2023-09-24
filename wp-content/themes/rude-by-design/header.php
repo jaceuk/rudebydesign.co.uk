@@ -19,42 +19,49 @@
 				</svg>
 			</a>
 
-			<nav class="account-and-basket">
-				<div class="menu">
-					<ul>
-						<li><a href="/my-account">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-									<path d="M0 0h24v24H0V0z" fill="none" />
-									<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z" />
-								</svg>
-								Account</a></li>
-						<li><a href="/basket">
-								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-									<path d="M0 0h24v24H0V0z" fill="none" />
-									<path d="M22 9h-4.79l-4.39-6.57c-.4-.59-1.27-.59-1.66 0L6.77 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM11.99 4.79L14.8 9H9.18l2.81-4.21zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
-								</svg>
-								Basket</a></li>
-					</ul>
+			<?php if ($pagename !== 'checkout') { ?>
+
+				<nav class="account-and-basket">
+					<div class="menu">
+						<ul>
+							<li><a href="/my-account">
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+										<path d="M0 0h24v24H0V0z" fill="none" />
+										<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z" />
+									</svg>
+									Account</a></li>
+							<li><a href="/basket">
+									<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+										<path d="M0 0h24v24H0V0z" fill="none" />
+										<path d="M22 9h-4.79l-4.39-6.57c-.4-.59-1.27-.59-1.66 0L6.77 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1zM11.99 4.79L14.8 9H9.18l2.81-4.21zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+									</svg>
+									Basket
+									<?php if (sizeof(WC()->cart->get_cart()) > 0) {
+										echo '<div class="badge">' . WC()->cart->get_cart_contents_count() . '</div>';
+									} ?>
+								</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="search">
+					<?php
+					get_search_form();
+					?>
 				</div>
-			</nav>
 
-			<div class="search">
-				<?php
-				get_search_form();
-				?>
-			</div>
-
-			<div class="currency">
-				<button>Curr</button>
-			</div>
-
-			<nav class="nav">
-				<div class="menu">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/shop">Shop</a></li>
-					</ul>
+				<div class="currency">
+					<button>Curr</button>
 				</div>
-			</nav>
+
+				<nav class="nav">
+					<div class="menu">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/shop">Shop</a></li>
+						</ul>
+					</div>
+				</nav>
 		</div>
+	<?php } ?>
 	</header>

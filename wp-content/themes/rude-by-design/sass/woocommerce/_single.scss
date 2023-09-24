@@ -72,10 +72,6 @@
         }
       }
 
-      .reset_variations {
-        text-decoration: underline;
-      }
-
       select[name='attribute_pa_size'] {
         padding-right: var(--s-32);
       }
@@ -119,6 +115,10 @@
 
         &.active {
           border-color: var(--c-nearly-black);
+        }
+
+        a {
+          text-decoration: none;
         }
       }
     }
@@ -208,7 +208,6 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: var(--scale-16-32);
-      padding-bottom: var(--scale-32-64);
       width: 100%;
 
       @media (min-width: 768px) {
