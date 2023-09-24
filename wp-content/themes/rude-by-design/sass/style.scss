@@ -12,7 +12,12 @@ Version: 1.0.0
 @import 'typography';
 @import 'header';
 @import 'footer';
-@import 'woocommerce';
+
 @import 'buttons';
 @import 'forms';
 @import 'global';
+
+@import 'woocommerce/archive';
+@import 'woocommerce/single';
+@import 'woocommerce/cart';
+@import 'woocommerce/common';
