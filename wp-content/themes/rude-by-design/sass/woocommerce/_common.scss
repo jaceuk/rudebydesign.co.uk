@@ -55,7 +55,7 @@ li.product {
 // message
 .woocommerce-message {
   background: var(--c-accent-pale);
-  border: 1px solid var(--c-accent-pale);
+  border: 1px solid var(--c-button-border);
   color: var(--c-nearly-black);
   margin-bottom: var(--scale-16-32);
   border-radius: var(--border-radius-small);
@@ -80,6 +80,18 @@ li.product {
     outline-offset: -2px;
     font-weight: var(--fw-semi-bold);
   }
+}
+
+.woocommerce-error {
+  background: var(--c-error-pale);
+  border: 1px solid var(--c-button-border);
+  color: var(--c-error-dark);
+  margin-bottom: var(--scale-16-32);
+  border-radius: var(--border-radius-small);
+  display: grid;
+  gap: var(--scale-16-32);
+  padding: var(--scale-8-16);
+  overflow: hidden;
 }
 
 // combobox used on cart and checkout for country

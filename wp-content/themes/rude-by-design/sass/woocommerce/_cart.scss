@@ -4,7 +4,7 @@
 
   .woocommerce-info {
     background: var(--c-accent-pale);
-    border: 1px solid var(--c-accent-pale);
+    border: 1px solid var(--c-button-border);
     color: var(--c-nearly-black);
     margin-bottom: var(--scale-16-32);
     border-radius: var(--border-radius-small);
@@ -175,13 +175,13 @@
           padding: var(--scale-8-16);
         }
 
+        tr:first-child td {
+          border-top: 1px solid var(--c-grey-med);
+        }
+
         td {
           border: none;
           border-bottom: 1px solid var(--c-grey-med);
-
-          &:last-child {
-            border: none;
-          }
         }
 
         .woocommerce-shipping-totals {

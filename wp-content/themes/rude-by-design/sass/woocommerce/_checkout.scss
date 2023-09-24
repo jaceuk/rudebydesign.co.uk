@@ -6,24 +6,36 @@ form.woocommerce-checkout {
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
   }
 
   .col2-set {
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: span 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    h3 {
+      grid-row-start: 1;
+    }
   }
 
   h3 {
+    grid-column-start: 1;
+
     @media (min-width: 768px) {
       grid-column-start: 2;
+      grid-row-start: 2;
     }
   }
 
   .woocommerce-checkout-review-order {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
     @media (min-width: 768px) {
       grid-column-start: 2;
-      grid-row-start: 2;
+      grid-row-start: 3;
       align-content: start;
     }
   }
@@ -35,6 +47,11 @@ form.woocommerce-checkout {
     h3 {
       grid-column-start: 1;
     }
+  }
+
+  .woocommerce-NoticeGroup {
+    grid-column-start: 1;
+    grid-column-end: span 2;
   }
 }
 
