@@ -40,9 +40,17 @@
       h1 {
         font-size: var(--fs-h2);
       }
+      .woocommerce-product-details__short-description {
+        display: grid;
+        gap: var(--scale-16-32);
+      }
 
       .price {
         font-size: var(--fs-h4);
+
+        ins {
+          text-decoration: none;
+        }
       }
 
       .variations {
@@ -76,10 +84,6 @@
         gap: var(--scale-8-16);
         width: 100%;
 
-        @media (min-width: 768px) {
-          width: 25.8rem;
-        }
-
         .qty {
           width: 100%;
         }
@@ -103,7 +107,6 @@
   .woocommerce-tabs {
     display: grid;
     gap: var(--scale-16-32);
-    margin-bottom: var(--scale-32-64);
     max-width: var(--max-readable-width);
 
     @media (min-width: 768px) {
@@ -187,6 +190,7 @@
         display: inline-block;
         outline-offset: -2px;
         font-weight: var(--fw-semi-bold);
+        text-decoration: none;
 
         &.active {
           border: 2px solid var(--c-nearly-black);
@@ -203,6 +207,17 @@
       label {
         font-weight: var(--fw-regular);
       }
+    }
+
+    .comment-reply-title {
+      font-size: var(--fs-h4);
+      font-weight: var(--fw-bold);
+    }
+
+    .commentlist {
+      padding: 0;
+      display: grid;
+      gap: var(--scale-16-32);
     }
   }
 
