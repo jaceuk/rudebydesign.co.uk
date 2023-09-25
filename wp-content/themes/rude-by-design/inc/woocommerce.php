@@ -17,6 +17,7 @@
  *
  * @return void
  */
+
 function rude_by_design_woocommerce_setup()
 {
 	add_theme_support(
@@ -39,6 +40,31 @@ function rude_by_design_woocommerce_setup()
 add_action('after_setup_theme', 'rude_by_design_woocommerce_setup');
 
 /**
+ * WooCommerce specific scripts & stylesheets.
+ *
+ * @return void
+ */
+function rude_by_design_woocommerce_scripts()
+{
+	wp_enqueue_style('rude-by-design-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION);
+
+	$font_path   = WC()->plugin_url() . '/assets/fonts/';
+	$inline_font = '@font-face {
+			font-family: "star";
+			src: url("' . $font_path . 'star.eot");
+			src: url("' . $font_path . 'star.eot?#iefix") format("embedded-opentype"),
+				url("' . $font_path . 'star.woff") format("woff"),
+				url("' . $font_path . 'star.ttf") format("truetype"),
+				url("' . $font_path . 'star.svg#star") format("svg");
+			font-weight: normal;
+			font-style: normal;
+		}';
+
+	wp_add_inline_style('rude-by-design-woocommerce-style', $inline_font);
+}
+add_action('wp_enqueue_scripts', 'rude_by_design_woocommerce_scripts');
+
+/**
  * Disable the default WooCommerce stylesheet.
  *
  * Removing the default WooCommerce stylesheet and enqueing your own will
@@ -48,7 +74,19 @@ add_action('after_setup_theme', 'rude_by_design_woocommerce_setup');
  */
 add_filter('woocommerce_enqueue_styles', '__return_empty_array');
 
+/**
+ * Add 'woocommerce-active' class to the body tag.
+ *
+ * @param  array $classes CSS classes applied to the body tag.
+ * @return array $classes modified to include 'woocommerce-active' class.
+ */
+function rude_by_design_woocommerce_active_body_class($classes)
+{
+	$classes[] = 'woocommerce-active';
 
+	return $classes;
+}
+add_filter('body_class', 'rude_by_design_woocommerce_active_body_class');
 
 /**
  * Related Products Args.
@@ -104,99 +142,10 @@ if (!function_exists('rude_by_design_woocommerce_wrapper_after')) {
 	{
 		?>
 		</main><!-- #main -->
-	<?php
-	}
-}
-add_action('woocommerce_after_main_content', 'rude_by_design_woocommerce_wrapper_after');
-
-/**
- * Sample implementation of the WooCommerce Mini Cart.
- *
- * You can add the WooCommerce Mini Cart to header.php like so ...
- *
-	<?php
-		if ( function_exists( 'rude_by_design_woocommerce_header_cart' ) ) {
-			rude_by_design_woocommerce_header_cart();
-		}
-	?>
- */
-
-if (!function_exists('rude_by_design_woocommerce_cart_link_fragment')) {
-	/**
-	 * Cart Fragments.
-	 *
-	 * Ensure cart contents update when products are added to the cart via AJAX.
-	 *
-	 * @param array $fragments Fragments to refresh via AJAX.
-	 * @return array Fragments to refresh via AJAX.
-	 */
-	function rude_by_design_woocommerce_cart_link_fragment($fragments)
-	{
-		ob_start();
-		rude_by_design_woocommerce_cart_link();
-		$fragments['a.cart-contents'] = ob_get_clean();
-
-		return $fragments;
-	}
-}
-add_filter('woocommerce_add_to_cart_fragments', 'rude_by_design_woocommerce_cart_link_fragment');
-
-if (!function_exists('rude_by_design_woocommerce_cart_link')) {
-	/**
-	 * Cart Link.
-	 *
-	 * Displayed a link to the cart including the number of items present and the cart total.
-	 *
-	 * @return void
-	 */
-	function rude_by_design_woocommerce_cart_link()
-	{
-	?>
-		<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'rude-by-design'); ?>">
-			<?php
-			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
-				_n('%d item', '%d items', WC()->cart->get_cart_contents_count(), 'rude-by-design'),
-				WC()->cart->get_cart_contents_count()
-			);
-			?>
-			<span class="amount"><?php echo wp_kses_data(WC()->cart->get_cart_subtotal()); ?></span> <span class="count"><?php echo esc_html($item_count_text); ?></span>
-		</a>
-	<?php
-	}
-}
-
-if (!function_exists('rude_by_design_woocommerce_header_cart')) {
-	/**
-	 * Display Header Cart.
-	 *
-	 * @return void
-	 */
-	function rude_by_design_woocommerce_header_cart()
-	{
-		if (is_cart()) {
-			$class = 'current-menu-item';
-		} else {
-			$class = '';
-		}
-	?>
-		<ul id="site-header-cart" class="site-header-cart">
-			<li class="<?php echo esc_attr($class); ?>">
-				<?php rude_by_design_woocommerce_cart_link(); ?>
-			</li>
-			<li>
-				<?php
-				$instance = array(
-					'title' => '',
-				);
-
-				the_widget('WC_Widget_Cart', $instance);
-				?>
-			</li>
-		</ul>
 <?php
 	}
 }
+add_action('woocommerce_after_main_content', 'rude_by_design_woocommerce_wrapper_after');
 
 // disable sidebar
 function disable_woo_commerce_sidebar()
