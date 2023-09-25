@@ -13,16 +13,13 @@ header h1 {
   margin-bottom: 0;
 }
 
-.woocommerce h2 {
-  margin-bottom: var(--scale-16-32);
-}
-
 // product card
 li.product {
   display: grid;
   gap: var(--scale-8-16);
   justify-items: center;
   text-align: center;
+  position: relative;
 
   img {
     width: 100%;
@@ -47,6 +44,10 @@ li.product {
     font-size: var(--fs-body);
     font-weight: var(--fw-semi-bold);
 
+    ins {
+      text-decoration: none;
+    }
+
     .price-prefix {
       font-size: var(--fs-small);
     }
@@ -54,6 +55,18 @@ li.product {
 
   a.add_to_cart_button {
     align-self: end;
+  }
+
+  .onsale {
+    position: absolute;
+    top: 0;
+    padding: var(--s-8);
+    background: var(--c-error-dark);
+    color: var(--c-white);
+    border-top-left-radius: var(--border-radius-small);
+    border-bottom-right-radius: var(--border-radius-small);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semi-bold);
   }
 }
 

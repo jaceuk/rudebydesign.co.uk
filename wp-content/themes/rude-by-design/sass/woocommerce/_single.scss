@@ -10,9 +10,22 @@
     grid-template-columns: 1fr;
     gap: var(--scale-16-32);
     align-items: flex-start;
+    position: relative;
 
     @media (min-width: 768px) {
       grid-template-columns: 6fr 4fr;
+    }
+
+    .onsale {
+      position: absolute;
+      top: 0;
+      padding: var(--scale-8-16);
+      background: var(--c-error-dark);
+      color: var(--c-white);
+      border-top-left-radius: var(--border-radius-small);
+      border-bottom-right-radius: var(--border-radius-small);
+      font-weight: var(--fw-semi-bold);
+      z-index: 99;
     }
 
     img {

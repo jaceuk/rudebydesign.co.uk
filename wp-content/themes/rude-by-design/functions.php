@@ -125,6 +125,9 @@ add_action('wp_enqueue_scripts', 'rude_by_design_scripts');
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+// remove admin bar
+add_filter('show_admin_bar', '__return_false');
+
 
 /**
  * Load WooCommerce compatibility file.

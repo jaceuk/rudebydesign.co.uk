@@ -5,7 +5,7 @@ form {
   input,
   select,
   textarea {
-    padding: var(--scale-8-16);
+    padding: var(--scale-8-16) var(--s-32) var(--scale-8-16) var(--scale-8-16);
     border-radius: var(--border-radius-small);
     border: 1px solid var(--c-grey-med);
     outline-offset: -2px;
