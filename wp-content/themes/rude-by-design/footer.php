@@ -12,7 +12,7 @@
 			<div class="h5">Support</div>
 			<ul>
 				<li><a href="/shop">Contact us</a></li>
-				<li><a href="/sample-page">Refunds and returns</a></li>
+				<li><a href="/sample-page">Returns policy</a></li>
 				<li><a href="/sample-page">Shipping info</a></li>
 			</ul>
 		</div>
@@ -22,8 +22,8 @@
 		<div class="legals">
 			<ul>
 				<li>&copy; Rude by Designs <?php echo date("Y"); ?>, all rights reserved.</li>
-				<li><a href="/shop">Privacy policy</a></li>
-				<li><a href="/sample-page">Terms & conditions</a></li>
+				<li><a href="/privacy">Privacy policy</a></li>
+				<li><a href="/terms">Terms of service</a></li>
 			</ul>
 		</div>
 	</div>

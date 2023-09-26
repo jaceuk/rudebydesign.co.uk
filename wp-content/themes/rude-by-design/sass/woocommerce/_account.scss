@@ -23,13 +23,26 @@
     gap: var(--scale-16-32);
     align-items: flex-start;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
+    .woocommerce-error {
+      margin: 0;
     }
   }
 
   .woocommerce-MyAccount-content {
     width: 100%;
+    display: grid;
+    gap: var(--scale-16-32);
+
+    .woocommerce-message {
+      margin: 0;
+    }
+
+    .woocommerce-address-fields,
+    .woocommerce-address-fields__field-wrapper,
+    .woocommerce-Addresses {
+      display: grid;
+      gap: var(--scale-16-32);
+    }
 
     form {
       max-width: var(--max-readable-width);
@@ -65,5 +78,11 @@
     a {
       white-space: nowrap;
     }
+  }
+}
+
+.logged-in.woocommerce-account .woocommerce {
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 }
