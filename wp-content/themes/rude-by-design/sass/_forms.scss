@@ -2,6 +2,10 @@ form {
   display: grid;
   gap: var(--scale-16-32);
 
+  &.search-form {
+    gap: 0;
+  }
+
   input,
   select,
   textarea {
