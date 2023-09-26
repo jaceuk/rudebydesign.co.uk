@@ -21,12 +21,20 @@
 
 		<div class="legals">
 			<ul>
+				<li>&copy; Rude by Designs <?php echo date("Y"); ?>, all rights reserved.</li>
 				<li><a href="/shop">Privacy policy</a></li>
 				<li><a href="/sample-page">Terms & conditions</a></li>
 			</ul>
 		</div>
 	</div>
 </footer>
+
+<div id="cookie-notice" class="cookie-notice">
+	<div class="inner-wrapper">
+		This site uses cookies to provide an optimized shopping experience. By using this site, you agree to the use of cookies.
+		<button id="cookie-button">Dismiss</button>
+	</div>
+</div>
 
 <?php wp_footer(); ?>
 
