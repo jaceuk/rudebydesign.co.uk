@@ -101,6 +101,28 @@
         padding: var(--scale-16-24);
       }
     }
+
+    .woocommerce-product-gallery {
+      max-width: 99%;
+
+      .flex-control-thumbs {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--scale-8-16);
+
+        img {
+          width: 100%;
+          cursor: pointer;
+        }
+
+        .flex-active {
+          cursor: inherit;
+          filter: grayscale(1);
+          opacity: 0.2;
+        }
+      }
+    }
   }
 
   // product tabs
