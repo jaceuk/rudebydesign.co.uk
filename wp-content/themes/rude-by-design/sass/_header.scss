@@ -12,7 +12,7 @@
   .inner-wrapper {
     display: grid;
     gap: var(--scale-16-32);
-    grid-template-columns: auto auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
 
     .account-and-basket {
@@ -22,8 +22,8 @@
       grid-column-end: 5;
 
       @media (min-width: 768px) {
-        grid-column-start: 4;
-        grid-column-end: 5;
+        grid-column-start: 3;
+        grid-column-end: 4;
       }
     }
 
@@ -36,7 +36,7 @@
       @media (min-width: 768px) {
         grid-row-start: 1;
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 3;
       }
     }
 
@@ -49,7 +49,7 @@
       @media (min-width: 768px) {
         grid-row-start: 2;
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 3;
       }
     }
 

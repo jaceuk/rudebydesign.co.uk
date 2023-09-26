@@ -1,0 +1,11 @@
+.home {
+  .section-heading {
+    margin: var(--scale-16-32) 0;
+  }
+
+  .banner {
+    background: var(--c-white);
+    border-radius: var(--border-radius-small);
+    padding: var(--scale-16-32);
+  }
+}

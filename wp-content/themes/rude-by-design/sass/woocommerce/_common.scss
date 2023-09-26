@@ -24,6 +24,7 @@ li.product {
   justify-items: center;
   text-align: center;
   position: relative;
+  align-items: flex-start;
 
   img {
     width: 100%;
@@ -37,6 +38,10 @@ li.product {
     gap: var(--scale-8-16);
     width: 100%;
     text-decoration: none;
+
+    & + a {
+      margin: auto 0 0 0;
+    }
   }
 
   .woocommerce-loop-product__title {

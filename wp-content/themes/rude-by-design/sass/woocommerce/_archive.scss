@@ -1,5 +1,6 @@
 // shop page, product list
-.archive {
+.archive,
+.home {
   .products {
     display: grid;
     grid-template-columns: 1fr 1fr;
