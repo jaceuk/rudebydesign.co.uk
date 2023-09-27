@@ -54,10 +54,6 @@ form.woocommerce-checkout {
     grid-column-end: span 2;
   }
 
-  input:not([type='checkbox']) {
-    width: 100%;
-  }
-
   .col2-set {
     display: grid;
     gap: var(--scale-16-32);

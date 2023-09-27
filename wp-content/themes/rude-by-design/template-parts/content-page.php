@@ -15,7 +15,7 @@
 		<?php the_title('<h1>', '</h1>'); ?>
 	</header>
 
-	<?php rude_by_design_post_thumbnail(); ?>
+	<?php the_post_thumbnail(); ?>
 
 	<div>
 		<?php

@@ -7,7 +7,6 @@
  *
  * @package Rude_by_Design
  */
-
 ?>
 
 <article>
@@ -18,19 +17,10 @@
 		else :
 			the_title('<h2><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
 		endif;
-
-		if ('post' === get_post_type()) :
 		?>
-			<div>
-				<?php
-				rude_by_design_posted_on();
-				rude_by_design_posted_by();
-				?>
-			</div>
-		<?php endif; ?>
 	</header>
 
-	<?php rude_by_design_post_thumbnail(); ?>
+	<?php the_post_thumbnail(); ?>
 
 	<div>
 		<?php
@@ -57,8 +47,4 @@
 		);
 		?>
 	</div>
-
-	<footer>
-		<?php rude_by_design_entry_footer(); ?>
-	</footer>
 </article>

@@ -13,6 +13,13 @@ form {
     border-radius: var(--border-radius-small);
     border: 1px solid var(--c-grey-med);
     outline-offset: -2px;
+    width: 100%;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   select {
@@ -47,12 +54,6 @@ input[type='submit'] {
   height: fit-content;
   display: inline-block;
   outline-offset: -2px;
-}
-
-input[type='checkbox'],
-input[type='radio'] {
-  width: 2.4rem;
-  height: 2.4rem;
 }
 
 .search-form {

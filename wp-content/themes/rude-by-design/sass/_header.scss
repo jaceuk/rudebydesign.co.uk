@@ -85,6 +85,11 @@
       width: 100%;
     }
   }
+
+  input[type='submit'] {
+    width: auto;
+    cursor: pointer;
+  }
 }
 
 .menu {

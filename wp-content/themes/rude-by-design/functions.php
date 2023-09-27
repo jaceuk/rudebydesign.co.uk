@@ -114,13 +114,16 @@ function rude_by_design_scripts()
 }
 add_action('wp_enqueue_scripts', 'rude_by_design_scripts');
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
 // remove admin bar
 add_filter('show_admin_bar', '__return_false');
+
+// prevent empty search
+add_filter('posts_search', function ($search, \WP_Query $q) {
+	if (!is_admin() && empty($search) && $q->is_search() && $q->is_main_query())
+		$search .= " AND 0=1 ";
+
+	return $search;
+}, 10, 2);
 
 
 /**

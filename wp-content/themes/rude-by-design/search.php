@@ -24,19 +24,25 @@ get_header();
 			</h1>
 		</header><!-- .page-header -->
 
+
 	<?php
 		/* Start the Loop */
+		$ids = [];
 		while (have_posts()) :
 			the_post();
+
+			$ids[] += get_the_ID();
 
 			/**
 			 * Run the loop for the search to output the results.
 			 * If you want to overload this in a child theme then include a file
 			 * called content-search.php and that will be used instead.
 			 */
-			get_template_part('template-parts/content', 'search');
-
+		// get_template_part('template-parts/content', 'search');
 		endwhile;
+
+		$ids_csv = implode(',', $ids);
+		echo do_shortcode('[products ids="' . $ids_csv . '" columns="4"]');
 
 		the_posts_navigation();
 
@@ -46,6 +52,7 @@ get_header();
 
 	endif;
 	?>
+
 
 </main><!-- #main -->
 
