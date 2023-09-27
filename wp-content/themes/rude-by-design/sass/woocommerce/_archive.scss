@@ -15,7 +15,7 @@
 
     .product {
       display: grid;
-      gap: var(--scale-16-32);
+      gap: var(--scale-8-16);
 
       @media (min-width: 768px) {
         grid-template-columns: 100%;

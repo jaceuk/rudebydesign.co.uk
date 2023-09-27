@@ -11,13 +11,13 @@
 		<div class="footer-menu">
 			<div class="h5">Support</div>
 			<ul>
-				<li><a href="/shop">Contact us</a></li>
-				<li><a href="/sample-page">Returns policy</a></li>
-				<li><a href="/sample-page">Shipping info</a></li>
+				<li><a href="/contact">Contact us</a></li>
+				<li><a href="/returns">Returns policy</a></li>
+				<li><a href="/shipping">Shipping info</a></li>
 			</ul>
 		</div>
 
-		<div class="newsletter">Newsletter signup</div>
+		<div class="newsletter"></div>
 
 		<div class="legals">
 			<ul>

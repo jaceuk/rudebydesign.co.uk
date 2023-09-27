@@ -23,6 +23,8 @@ get_header();
 			?>
 		</header>
 
+		<?php get_template_part('components/banner'); ?>
+
 	<?php
 		/* Start the Loop */
 		while (have_posts()) :

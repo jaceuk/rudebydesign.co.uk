@@ -6,6 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<?php
+	if (is_home() || is_front_page()) {
+	?>
+		<meta name="description" content="Treat someone you love to a rude, funny or sarcastic mug.">
+	<?php
+	}
+	?>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -48,10 +56,6 @@
 					<?php
 					get_search_form();
 					?>
-				</div>
-
-				<div class="currency">
-					<button>Curr</button>
 				</div>
 
 				<nav class="nav">
