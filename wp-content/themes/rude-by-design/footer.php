@@ -4,7 +4,7 @@
 			<div class="h5">Rude by Design</div>
 			<ul>
 				<li><a href="/">Homepage</a></li>
-				<li><a href="/shop">Shop</a></li>
+				<li><a href="/product-category/mugs/">Mugs</a></li>
 			</ul>
 		</div>
 

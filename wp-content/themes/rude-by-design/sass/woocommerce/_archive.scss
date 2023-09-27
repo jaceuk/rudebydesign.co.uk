@@ -42,12 +42,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    margin-top: var(--scale-16-32);
 
     a.page-numbers {
       padding: var(--scale-8-16) var(--scale-16-24);
       border-radius: var(--border-radius-small);
-      border: 1px solid var(--c-grey-pale);
-      background-color: var(--c-grey-pale);
+      border: 1px solid var(--c-button-border);
+      background-color: var(--c-grey);
       color: var(--c-nearly-black);
       height: fit-content;
     }

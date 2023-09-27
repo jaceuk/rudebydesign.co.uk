@@ -62,7 +62,7 @@
 					<div class="menu">
 						<ul>
 							<li><a href="/">Home</a></li>
-							<li><a href="/shop">Shop</a></li>
+							<li><a href="/product-category/mugs/">Mugs</a></li>
 						</ul>
 					</div>
 				</nav>
