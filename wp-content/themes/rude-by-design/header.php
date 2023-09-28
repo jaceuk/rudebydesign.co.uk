@@ -65,7 +65,19 @@
 							<li><a href="/product-category/mugs/">Mugs</a></li>
 						</ul>
 					</div>
+
+					<div class="notice">We ship worldwide</div>
 				</nav>
 		</div>
 	<?php } ?>
 	</header>
+
+	<?php
+	if (is_home() || is_front_page()) {
+	?>
+		<div class="banner-wrapper">
+			<div class="inner-wrapper"><?php get_template_part('components/banner'); ?></div>
+		</div>
+	<?php
+	}
+	?>

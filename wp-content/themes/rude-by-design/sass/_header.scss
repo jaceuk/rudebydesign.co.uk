@@ -3,7 +3,6 @@
   padding: var(--scale-16-32) 0;
   background: var(--c-nearly-black);
   position: relative;
-  margin-bottom: var(--scale-16-32);
 
   a {
     text-decoration: none;
@@ -41,7 +40,9 @@
     }
 
     .nav {
-      display: grid;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: center;
       grid-column-start: 1;
       grid-column-end: 5;
@@ -50,6 +51,10 @@
         grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 4;
+      }
+
+      .notice {
+        color: var(--c-accent);
       }
     }
   }
