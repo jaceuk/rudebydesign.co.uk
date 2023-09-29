@@ -66,7 +66,8 @@
 						</ul>
 					</div>
 
-					<div class="notice">We ship worldwide</div>
+					<div class="currency-switcher">Currency<?php dynamic_sidebar('currency-switcher'); ?></div>
+
 				</nav>
 		</div>
 	<?php } ?>

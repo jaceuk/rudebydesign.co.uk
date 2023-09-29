@@ -53,6 +53,13 @@
         }
       }
 
+      .woocommerce-variation-price {
+        .price {
+          font-size: var(--fs-h3);
+          font-weight: var(--fw-bold);
+        }
+      }
+
       .variations {
         tr {
           display: flex;

@@ -4,6 +4,22 @@
   background: var(--c-nearly-black);
   position: relative;
 
+  .currency-switcher {
+    display: flex;
+    flex-direction: row;
+    gap: var(--scale-8-16);
+    align-items: center;
+    color: var(--c-accent);
+
+    select[name='currency'] {
+      padding: var(--scale-8-16) !important;
+
+      option {
+        color: var(--c-nearly-black);
+      }
+    }
+  }
+
   a {
     text-decoration: none;
   }

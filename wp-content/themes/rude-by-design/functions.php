@@ -92,8 +92,8 @@ function rude_by_design_widgets_init()
 {
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Sidebar', 'rude-by-design'),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__('Currency Switcher', 'rude-by-design'),
+			'id'            => 'currency-switcher',
 			'description'   => esc_html__('Add widgets here.', 'rude-by-design'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

@@ -1,57 +1,27 @@
 // checkout page
 form.woocommerce-checkout {
-  display: grid;
-  gap: var(--scale-16-32);
-  grid-template-columns: 1fr;
-
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-  }
+  display: block;
+  margin-top: var(--scale-16-32);
 
   .col2-set {
-    grid-row-start: 2;
-    grid-row-end: span 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    float: none;
+    width: 100%;
+    padding: 0 0 var(--scale-16-32) 0;
 
-    h3 {
-      grid-row-start: 1;
+    @media (min-width: 768px) {
+      float: left;
+      width: 50%;
+      padding: 0 var(--scale-16-32) var(--scale-16-32) 0;
     }
   }
 
-  h3 {
-    grid-column-start: 1;
-
-    @media (min-width: 768px) {
-      grid-column-start: 2;
-      grid-row-start: 2;
-    }
-  }
-
-  .woocommerce-checkout-review-order {
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-    @media (min-width: 768px) {
-      grid-column-start: 2;
-      grid-row-start: 3;
-      align-content: start;
-    }
+  #order_review_heading {
+    margin-bottom: var(--scale-16-32);
   }
 
   .woocommerce-billing-fields {
     display: grid;
     gap: var(--scale-16-32);
-
-    h3 {
-      grid-column-start: 1;
-    }
-  }
-
-  .woocommerce-NoticeGroup {
-    grid-column-start: 1;
-    grid-column-end: span 2;
   }
 
   .col2-set {
@@ -178,5 +148,9 @@ form.woocommerce-checkout {
   #wc-woocommerce_payments-new-payment-method {
     width: 2.4rem !important;
     height: 2.4rem;
+  }
+
+  #wcpay-payment-request-button-separator {
+    margin: var(--scale-16-32);
   }
 }
