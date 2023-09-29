@@ -12,7 +12,8 @@
     color: var(--c-accent);
 
     select[name='currency'] {
-      padding: var(--scale-8-16) !important;
+      padding: var(--s-8) !important;
+      border-color: var(--c-accent) !important;
 
       option {
         color: var(--c-nearly-black);
