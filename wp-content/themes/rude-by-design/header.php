@@ -17,6 +17,21 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php if (!file_exists('c:\windows')) { ?>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZLPMWB8YG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-WZLPMWB8YG');
+	</script>
+<?php } ?>
+
 <body <?php body_class(); ?>>
 	<header class="header">
 		<div class="inner-wrapper">
