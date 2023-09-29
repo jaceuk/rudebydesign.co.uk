@@ -27,7 +27,7 @@
 				</svg>
 			</a>
 
-			<?php if ($pagename !== 'checkout') { ?>
+			<?php if (!is_checkout() || is_wc_endpoint_url('order-received')) { ?>
 
 				<nav class="account-and-basket">
 					<div class="menu">

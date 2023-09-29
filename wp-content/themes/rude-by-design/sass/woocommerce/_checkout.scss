@@ -153,4 +153,30 @@ form.woocommerce-checkout {
     display: grid;
     gap: var(--scale-16-32);
   }
+
+  label[for='payment_method_woocommerce_payments'] {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+  }
+
+  .woocommerce-checkout-payment,
+  .wc_payment_methods,
+  .wc_payment_method,
+  .payment_method_woocommerce_payments {
+    display: grid;
+    gap: var(--scale-16-32);
+  }
+
+  .form-row.woocommerce-SavedPaymentMethods-saveNew,
+  .woocommerce-SavedPaymentMethods li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--s-8);
+  }
+
+  #wc-woocommerce_payments-new-payment-method {
+    width: 2.4rem !important;
+    height: 2.4rem;
+  }
 }

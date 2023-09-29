@@ -23,6 +23,12 @@ do_action('woocommerce_before_main_content');
 echo do_shortcode('[products limit="4" columns="4" orderby="popularity" best_selling="true" ]');
 ?> -->
 
+<h2 class="section-heading">Featured</h2>
+
+<?php
+echo do_shortcode('[products limit="4" columns="4" orderby="id" order="DESC" visibility="featured"]');
+?>
+
 <h2 class="section-heading">New arrivals</h2>
 
 <?php

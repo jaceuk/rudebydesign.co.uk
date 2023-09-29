@@ -79,6 +79,40 @@
       white-space: nowrap;
     }
   }
+
+  .shop_table tr:last-child td {
+    text-align: left;
+    padding: var(--scale-8-16);
+  }
+
+  .woocommerce-columns {
+    display: grid;
+    gap: var(--scale-16-32);
+  }
+
+  .woocommerce-column {
+    display: grid;
+    gap: var(--scale-8-16);
+  }
+
+  #wc-woocommerce_payments-upe-form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .woocommerce-Payment,
+  .woocommerce-PaymentBox {
+    display: grid;
+    gap: var(--scale-16-32);
+  }
+
+  .testmode-info {
+    margin: 0;
+  }
+
+  .shop_table td:first-child {
+    border-top: none;
+  }
 }
 
 .logged-in.woocommerce-account .woocommerce {
