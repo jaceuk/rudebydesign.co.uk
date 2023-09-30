@@ -27,6 +27,17 @@ form.woocommerce-checkout {
   .col2-set {
     display: grid;
     gap: var(--scale-16-32);
+
+    .col-1 {
+      display: grid;
+      gap: var(--scale-16-32);
+
+      .woocommerce-form__label {
+        display: flex;
+        gap: var(--s-8);
+        flex-direction: row;
+      }
+    }
   }
 
   .woocommerce-billing-fields__field-wrapper {
@@ -152,5 +163,14 @@ form.woocommerce-checkout {
 
   #wcpay-payment-request-button-separator {
     margin: var(--scale-16-32);
+  }
+
+  &.processing {
+    &:after {
+      content: 'Processing ...';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
