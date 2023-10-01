@@ -173,3 +173,14 @@ function custom_my_account_menu_items($items)
 	return $items;
 }
 add_filter('woocommerce_account_menu_items', 'custom_my_account_menu_items');
+
+
+
+
+
+function add_content_after_addtocart_button_func()
+{
+	if (has_term(array('mugs'), 'product_cat'))
+		echo '<div class="callout">Stand out from the mug crowd with our super-sized 20oz mug!</div>';
+}
+add_action('woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func');
