@@ -5,6 +5,7 @@
 			<ul>
 				<li><a href="/">Homepage</a></li>
 				<li><a href="/product-category/mugs/">Mugs</a></li>
+				<li><a href="/product-category/coasters/">Coasters</a></li>
 			</ul>
 		</div>
 
