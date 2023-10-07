@@ -1,4 +1,10 @@
 // checkout page
+.woocommerce-checkout {
+  .header {
+    padding-bottom: var(--scale-16-32);
+  }
+}
+
 form.woocommerce-checkout {
   display: block;
   margin-top: var(--scale-16-32);
