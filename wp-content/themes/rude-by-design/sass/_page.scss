@@ -2,5 +2,9 @@
   p,
   h2 {
     margin-bottom: var(--scale-16-32);
+
+    &.woocommerce-loop-product__title {
+      margin: 0;
+    }
   }
 }

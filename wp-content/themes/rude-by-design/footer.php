@@ -13,6 +13,7 @@
 			<div class="h5">Support</div>
 			<ul>
 				<li><a href="/contact">Contact us</a></li>
+				<li><a href="/faq">FAQ</a></li>
 				<li><a href="/returns">Returns policy</a></li>
 				<li><a href="/shipping">Shipping info</a></li>
 			</ul>

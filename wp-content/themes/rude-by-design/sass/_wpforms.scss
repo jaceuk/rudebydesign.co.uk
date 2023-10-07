@@ -27,6 +27,12 @@ div.wpforms-container-full * {
   display: grid;
   gap: var(--scale-16-32);
 
+  .wpforms-form {
+    background: var(--c-white);
+    padding: var(--scale-16-32);
+    border-radius: var(--border-radius-small);
+  }
+
   .wpforms-field-container {
     .wpforms-field {
       padding: 0;
