@@ -93,11 +93,11 @@
 	<?php
 	if (is_home() || is_front_page()) {
 	?>
-		<div class="banner-wrapper">
-			<div class="inner-wrapper"><?php get_template_part('components/banner'); ?></div>
-		</div>
 
-		<div class="inner-wrapper"><?php get_template_part('components/christmas-banner'); ?></div>
+		<?php get_template_part('components/strapline'); ?>
+
+		<?php get_template_part('components/christmas-banner'); ?>
+
 	<?php
 	}
 	?>
