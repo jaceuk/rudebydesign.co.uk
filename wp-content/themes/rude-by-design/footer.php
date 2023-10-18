@@ -26,6 +26,7 @@
 				<li>&copy; Rude by Designs <?php echo date("Y"); ?>, all rights reserved.</li>
 				<li><a href="/privacy">Privacy policy</a></li>
 				<li><a href="/terms">Terms of service</a></li>
+				<li><a href="/wp-sitemap.xml">Sitemap</a></li>
 			</ul>
 		</div>
 	</div>
