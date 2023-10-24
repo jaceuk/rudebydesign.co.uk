@@ -193,20 +193,50 @@ function woocommerce_custom_product_description($content)
 	if (!is_product())
 		return $content;
 
-	$content .= '<h3>Details</h3><p>This sturdy, glossy, ceramic mug comes in the following sizes:</p>
-	<ul>
-		<li>
-			11 oz mug dimensions: 3.8″ (9.6 cm) in height, 3.2″ (8.2 cm) in diameter
-		</li>
-		<li>
-			15 oz mug dimensions: 4.7″ (11.9 cm) in height, 3.3″ (8.5 cm) in diameter
-		</li>
-		<li>
-			20 oz mug dimensions: 4.3″ (10.9 cm) in height, 3.7″ (9.3 cm) in diameter
-		</li>
+	// get parent category
+	global $post;
+	$categories = get_the_terms($post->ID, 'product_cat');
+
+	foreach ($categories as $category) {
+		if ($category->parent == 0) {
+			$product_parent_cat_name =  $category->name;
+		}
+	}
+
+	if ($product_parent_cat_name === 'Mugs') {
+		$content .= '<h3>Details</h3><p>This sturdy, glossy, ceramic mug comes in the following sizes:</p>
+		<ul>
+			<li>
+				11 oz mug dimensions: 3.8″ (9.6 cm) in height, 3.2″ (8.2 cm) in diameter
+			</li>
+			<li>
+				15 oz mug dimensions: 4.7″ (11.9 cm) in height, 3.3″ (8.5 cm) in diameter
+			</li>
+			<li>
+				20 oz mug dimensions: 4.3″ (10.9 cm) in height, 3.7″ (9.3 cm) in diameter
+			</li>
+		</ul>
+		<p>This mug features a vivid print and is dishwasher and microwave safe.</p>
+		';
+	}
+
+	if ($product_parent_cat_name === 'Coasters') {
+		$content .= '<h3>Details</h3><p>The coaster is waterproof and heat-resistant, designed to last a long time. Features:</p>
+		<p>Size:</p>
+		<ul>
+			<li>Hardboard MDF 0.12″ (3 mm)</li>
+			<li>Cork 0.04″ (1 mm)</li>
+			<li>Size: 3.74″ × 3.74″ × 0.16″ (95 × 95 × 4 mm)</li>
+		</ul>
+		<p>Features:</p>
+		<ul>
+		<li>High-gloss coating on top</li>
+		<li>Rounded corners</li>
+		<li>Water-repellent, heat-resistant, and non-slip</li>
+		<li>Easy to clean</li>
 	</ul>
-	<p>This mug features a vivid print and is dishwasher and microwave safe.</p>
-	';
+		';
+	}
 
 	return $content;
 }
