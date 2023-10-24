@@ -187,6 +187,16 @@
       display: grid;
       gap: var(--scale-16-32);
 
+      ul {
+        padding-left: var(--scale-16-32);
+        display: grid;
+        gap: var(--s-16);
+
+        li {
+          list-style: disc;
+        }
+      }
+
       br {
         content: '';
         display: block;

@@ -174,13 +174,39 @@ function custom_my_account_menu_items($items)
 }
 add_filter('woocommerce_account_menu_items', 'custom_my_account_menu_items');
 
-
-
-
-
+// 'large mug' upsell message after buy button
 function add_content_after_addtocart_button_func()
 {
 	if (has_term(array('mugs'), 'product_cat'))
 		echo '<div class="callout">Stand out from the mug crowd with our super-sized 20oz mug!</div>';
 }
 add_action('woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func');
+
+
+/**
+ * Customize product data tabs
+ */
+add_filter('the_content', 'woocommerce_custom_product_description', 20, 1);
+function woocommerce_custom_product_description($content)
+{
+	// Only for woocommerce single product pages
+	if (!is_product())
+		return $content;
+
+	$content .= '<h3>Details</h3><p>This sturdy, glossy, ceramic mug comes in the following sizes:</p>
+	<ul>
+		<li>
+			11 oz mug dimensions: 3.8″ (9.6 cm) in height, 3.2″ (8.2 cm) in diameter
+		</li>
+		<li>
+			15 oz mug dimensions: 4.7″ (11.9 cm) in height, 3.3″ (8.5 cm) in diameter
+		</li>
+		<li>
+			20 oz mug dimensions: 4.3″ (10.9 cm) in height, 3.7″ (9.3 cm) in diameter
+		</li>
+	</ul>
+	<p>This mug features a vivid print and is dishwasher and microwave safe.</p>
+	';
+
+	return $content;
+}
