@@ -14,6 +14,14 @@
 	}
 	?>
 
+	<?php
+	if (is_product()) {
+	?>
+		<meta name="description" content="<?php echo strip_tags(wc_get_product($post->ID)->get_description()); ?>">
+	<?php
+	}
+	?>
+
 	<?php wp_head(); ?>
 </head>
 
