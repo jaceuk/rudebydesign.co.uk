@@ -2,7 +2,7 @@
   <div class="inner-wrapper">
     <div class="strapline">
       <div>
-        <h1>Rude, funny and sarcastic mugs for all occassions</h1>
+        <h1>Rude, funny and sarcastic mugs for all occasions</h1>
         <p>with worldwide shipping!</p>
       </div>
     </div>
