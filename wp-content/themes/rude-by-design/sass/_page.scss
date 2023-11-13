@@ -8,4 +8,15 @@
       margin: 0;
     }
   }
+
+  ul.text-list {
+    padding-left: var(--scale-16-32);
+    display: grid;
+    gap: var(--s-16);
+    margin-bottom: var(--scale-16-32);
+
+    li {
+      list-style-type: disc;
+    }
+  }
 }

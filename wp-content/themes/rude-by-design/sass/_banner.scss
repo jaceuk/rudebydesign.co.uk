@@ -29,6 +29,13 @@
   margin: var(--scale-16-32) 0;
 }
 
+.notice {
+  background: var(--c-warning-pale);
+  padding: var(--scale-8-16) 0;
+  text-align: center;
+  color: var(--c-warning-dark);
+}
+
 .general-banner-wrapper {
   background: var(--c-white);
   border-radius: var(--border-radius-small);
