@@ -253,3 +253,21 @@ function new_loop_shop_per_page($cols)
 	$cols = 16;
 	return $cols;
 }
+
+
+/**
+ * @snippet       Add "Quantity:" before Add to Cart Button - WooCommerce
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 8
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+
+add_action('woocommerce_before_add_to_cart_quantity', 'bbloomer_echo_qty_front_add_cart');
+
+function bbloomer_echo_qty_front_add_cart()
+{
+	global $product;
+	if ($product->get_min_purchase_quantity() == $product->get_max_purchase_quantity()) return;
+	echo '<label>Quantity: </label>';
+}

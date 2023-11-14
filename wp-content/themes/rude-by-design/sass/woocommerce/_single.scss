@@ -95,13 +95,30 @@
         }
       }
 
+      .wcpa_form_outer {
+        margin: 0;
+
+        .wcpa_field_label {
+          font-weight: var(--fw-semi-bold);
+          font-size: var(--fs-nav);
+        }
+
+        .wcpa_field {
+          padding: var(--scale-8-16);
+          border-radius: var(--border-radius-small);
+          border: 1px solid var(--c-grey-med);
+          outline-offset: -2px;
+          width: 100%;
+          height: auto;
+        }
+
+        .wcpa_field_bottom {
+        }
+      }
+
       .woocommerce-variation-add-to-cart {
         display: grid;
         gap: var(--scale-8-16);
-        width: 100%;
-      }
-
-      .qty {
         width: 100%;
       }
 

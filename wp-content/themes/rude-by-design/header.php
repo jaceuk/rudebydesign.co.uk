@@ -69,7 +69,7 @@
 
 
 <body <?php body_class(); ?>>
-	<?php if (!is_checkout() || is_wc_endpoint_url('order-received')) { ?>
+	<?php if (!is_checkout() || !is_wc_endpoint_url('order-received')) { ?>
 		<?php get_template_part('components/christmas-cutoff-banner'); ?>
 	<?php } ?>
 
