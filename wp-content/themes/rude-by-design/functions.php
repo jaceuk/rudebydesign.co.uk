@@ -139,9 +139,10 @@ function fb_opengraph()
 {
 	global $post;
 
-	if (is_single()) {
+	if (is_product() || is_product_category()) {
 		if (has_post_thumbnail($post->ID)) {
-			$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+			$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+			$img_src = $img_src[0];
 		} else {
 			$img_src = get_stylesheet_directory_uri() . '/img/opengraph_image.jpg';
 		}
