@@ -238,6 +238,25 @@ function woocommerce_custom_product_description($content)
 		';
 	}
 
+	if ($product_parent_cat_name === 'T-shirts') {
+		$content .= '<h3>Details</h3><p>This design is printed on a Bella + Canvas 3001 unisex shirt. It feels soft and lightweight, with the right amount of stretch. It\'s comfortable and flattering for both men and women:</p>
+		<ul>
+			<li>
+			100% combed and ring-spun cotton (Heather colors contain polyester)
+			</li>
+			<li>
+			Fabric weight: 4.2 oz./yd.² (142 g/m²)
+			</li>
+			<li>
+			Pre-shrunk fabric
+			</li>
+			<li>Side-seamed construction</li>
+			<li>Shoulder-to-shoulder taping</li>
+			<li>Runs true to size</li>
+		</ul>
+		';
+	}
+
 	return $content;
 }
 
