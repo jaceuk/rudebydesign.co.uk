@@ -1,6 +1,4 @@
 .strapline-wrapper {
-  background: var(--c-accent-pale);
-
   .strapline {
     border-radius: var(--border-radius-small);
     padding: var(--scale-16-32) 0;
@@ -21,6 +19,19 @@
     .button {
       background-color: var(--c-secondary-button);
       margin: 0 0 0 auto;
+    }
+  }
+
+  &.sale {
+    background: var(--c-christmas-red);
+
+    h1,
+    p {
+      color: var(--c-white);
+    }
+
+    .strapline {
+      padding: var(--scale-8-16) 0;
     }
   }
 }

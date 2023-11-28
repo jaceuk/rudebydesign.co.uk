@@ -132,6 +132,16 @@
 	</header>
 
 	<?php
+	if (!is_checkout()) {
+	?>
+
+		<?php get_template_part('components/christmas-sale-banner'); ?>
+
+	<?php
+	}
+	?>
+
+	<?php
 	if (is_home() || is_front_page()) {
 	?>
 
