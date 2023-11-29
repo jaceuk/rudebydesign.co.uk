@@ -34,6 +34,11 @@
     }
 
     .summary {
+      form {
+        display: grid;
+        gap: var(--scale-8-16);
+      }
+
       display: grid;
       gap: var(--scale-16-32);
 
