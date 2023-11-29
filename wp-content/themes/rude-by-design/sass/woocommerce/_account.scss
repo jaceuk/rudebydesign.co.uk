@@ -1,4 +1,14 @@
 .woocommerce-account {
+  form {
+    display: grid;
+    gap: var(--scale-16-32);
+
+    &.search-form {
+      display: flex;
+      gap: 0;
+    }
+  }
+
   .u-column1,
   .u-column2 {
     display: grid;
