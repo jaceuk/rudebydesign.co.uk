@@ -290,3 +290,60 @@ function bbloomer_echo_qty_front_add_cart()
 	if ($product->get_min_purchase_quantity() == $product->get_max_purchase_quantity()) return;
 	echo '<label>Quantity: </label>';
 }
+
+// Show the regular price in product card it item is on sale
+// function variation_regular_price()
+// {
+// 	$product = wc_get_product(get_the_ID());
+// 	if ($product->is_on_sale()) {
+// 		$regular_price = $product->get_variation_regular_price('min');
+// 		echo '<p>' . $regular_price . '</p>';
+// 	}
+// }
+// add_action('woocommerce_after_shop_loop_item_title', 'variation_regular_price', 25);
+
+
+function custom_template_loop_price()
+{
+	global $product;
+
+	if (is_a($product, 'WC_Product')) {
+		echo '<span class="price">';
+
+		if ($product->is_type('variable')) {
+			$regular_price = $product->get_variation_regular_price('min');
+
+			echo '<span class="price-prefix">From </span><span class="woocommerce-Price-amount amount">';
+
+			if ($product->is_on_sale()) {
+				$sale_price = $product->get_variation_sale_price('min');
+				echo '<bdi class="line-through"><span class="woocommerce-Price-currencySymbol">£</span>' . $regular_price . '</bdi> <bdi><span class="woocommerce-Price-currencySymbol">£</span>' . $sale_price . '</bdi>';
+			} else {
+				echo '<bdi><span class="woocommerce-Price-currencySymbol">£</span>' . $regular_price . '</bdi>';
+			}
+
+			echo '</span>';
+		} else {
+			$regular_price = $product->get_regular_price('min');
+
+			echo '<span class="woocommerce-Price-amount amount">';
+
+			if ($product->is_on_sale()) {
+				$sale_price = $product->get_sale_price();
+				echo '<bdi class="line-through"><span class="woocommerce-Price-currencySymbol">£</span>' . $regular_price . '</bdi> <bdi><span class="woocommerce-Price-currencySymbol">£</span>' . $sale_price . '</bdi>';
+			} else {
+				echo '<bdi><span class="woocommerce-Price-currencySymbol">£</span>' . $regular_price . '</bdi>';
+			}
+
+			echo '</span>';
+		}
+
+
+
+
+		echo '</span>';
+	}
+
+	remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+}
+add_action('woocommerce_after_shop_loop_item_title', 'custom_template_loop_price', 5);
