@@ -135,7 +135,7 @@
 	if (!is_checkout()) {
 	?>
 
-		<?php get_template_part('components/christmas-sale-banner'); ?>
+
 
 	<?php
 	}
@@ -147,7 +147,7 @@
 
 		<?php get_template_part('components/strapline'); ?>
 
-		<?php get_template_part('components/christmas-banner'); ?>
+		<?php get_template_part('components/insult-photo-mug-banner'); ?>
 
 	<?php
 	}

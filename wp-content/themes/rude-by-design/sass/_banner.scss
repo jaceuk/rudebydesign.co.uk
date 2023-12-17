@@ -185,3 +185,45 @@
     }
   }
 }
+
+.insult-photo-banner-wrapper {
+  background: linear-gradient(0deg, var(--c-grey) 0%, var(--c-white) 100%);
+  border-radius: var(--border-radius-small);
+
+  .insult-photo-banner {
+    background-image: url(images/insult-photo-mug.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 50%;
+    border-radius: var(--border-radius-small);
+    padding: var(--scale-16-32) var(--scale-16-32) var(--scale-16-32) 50%;
+    display: grid;
+    gap: var(--scale-16-32);
+    z-index: 10;
+    position: relative;
+
+    @media (min-width: 768px) {
+      background-position: 3.2rem center;
+      background-size: 40%;
+    }
+
+    @media (min-width: 1200px) {
+      background-position: 3.2rem -15rem;
+      background-size: 40%;
+    }
+
+    h1 {
+      font-size: var(--fs-h4);
+      font-weight: var(--fw-semi-bold);
+
+      @media (min-width: 768px) {
+        font-size: var(--fs-h3);
+      }
+    }
+
+    .button {
+      background-color: var(--c-secondary-button);
+      margin: 0 0 0 auto;
+    }
+  }
+}
