@@ -348,3 +348,11 @@ function personalisation($order_id)
 	<p>If your order contains a personalised item that requires a photo please email it, along with your order number, to <a href='mailto:info@rudebydesign.co.uk'>info@rudebydesign.co.uk</a>. Please make sure your order number is in the email title and that the photo is of good quality and resolution. If your order contains more than one item that requires a photo please make it clear in the email which item each photo belongs to.</p>
 </section>";
 }
+
+// change default product sort order
+add_filter('woocommerce_default_catalog_orderby', 'default_catalog_orderby');
+
+function default_catalog_orderby($sort_by)
+{
+	return 'popularity';
+}
