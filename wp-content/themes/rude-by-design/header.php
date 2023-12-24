@@ -70,7 +70,7 @@
 
 <body <?php body_class(); ?>>
 	<?php if (!is_checkout() || !is_wc_endpoint_url('order-received')) { ?>
-		<?php get_template_part('components/christmas-cutoff-banner'); ?>
+
 	<?php } ?>
 
 	<header class="header">
@@ -148,6 +148,8 @@
 		<?php get_template_part('components/strapline'); ?>
 
 		<?php get_template_part('components/insult-photo-mug-banner'); ?>
+
+		<?php get_template_part('components/star-signs-banner'); ?>
 
 	<?php
 	}
