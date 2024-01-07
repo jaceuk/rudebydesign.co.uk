@@ -149,7 +149,8 @@
 
 		<?php get_template_part('components/insult-photo-mug-banner'); ?>
 
-		<?php get_template_part('components/star-signs-banner'); ?>
+		<?php // get_template_part('components/star-signs-banner'); 
+		?>
 
 	<?php
 	}
