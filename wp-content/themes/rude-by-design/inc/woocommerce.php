@@ -203,7 +203,7 @@ function woocommerce_custom_product_description($content)
 		}
 	}
 
-	if ($product_parent_cat_name === 'Mugs') {
+	if (strtolower($product_parent_cat_name) === 'funny mugs') {
 		$content .= '<h3>Details</h3><p>This sturdy, glossy, ceramic mug comes in the following sizes:</p>
 		<ul>
 			<li>
@@ -220,7 +220,7 @@ function woocommerce_custom_product_description($content)
 		';
 	}
 
-	if ($product_parent_cat_name === 'Coasters') {
+	if (strtolower($product_parent_cat_name) === 'funny coasters') {
 		$content .= '<h3>Details</h3><p>The coaster is waterproof and heat-resistant, designed to last a long time. Features:</p>
 		<p>Size:</p>
 		<ul>
@@ -238,7 +238,7 @@ function woocommerce_custom_product_description($content)
 		';
 	}
 
-	if ($product_parent_cat_name === 'T-shirts') {
+	if (strtolower($product_parent_cat_name) === 'funny t-shirts') {
 		$content .= '<h3>Details</h3><p>This design is printed on a Bella + Canvas 3001 unisex shirt. It feels soft and lightweight, with the right amount of stretch. It\'s comfortable and flattering for both men and women:</p>
 		<ul>
 			<li>
