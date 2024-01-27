@@ -40,6 +40,7 @@
 				<li><a href="/privacy">Privacy policy</a></li>
 				<li><a href="/terms">Terms of service</a></li>
 				<li><a href="/wp-sitemap.xml">Sitemap</a></li>
+				<li><a href="https://wilderbydesign.co.uk/">Gifts for animal lovers and pet owners</a></li>
 			</ul>
 		</div>
 	</div>
