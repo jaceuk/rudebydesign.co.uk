@@ -10,15 +10,9 @@
 			<div class="h5">Rude by Design</div>
 			<ul>
 				<li><a href="/">Homepage</a></li>
-				<li><a href="/product-category/mugs/">Mugs</a></li>
-				<li><a href="/product-category/coasters/">Coasters</a></li>
-				<li>
-					<a class="facebook" href="https://www.facebook.com/rudebydesignuk" target="_blank">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="16" height="16" focusable="false" aria-hidden="true">
-							<path fill-rule="evenodd" d="M28.848 50V24.997h6.902l.915-8.616h-7.817l.012-4.313c0-2.247.214-3.45 3.441-3.45h4.315V0h-6.903c-8.291 0-11.21 4.18-11.21 11.209v5.173h-5.168v8.616h5.168V50h10.345Z" clip-rule="evenodd"></path>
-						</svg>
-					</a>
-				</li>
+				<li><a href="/privacy">Privacy policy</a></li>
+				<li><a href="/terms">Terms of service</a></li>
+				<li><a href="/wp-sitemap.xml">Sitemap</a></li>
 			</ul>
 		</div>
 
@@ -32,14 +26,25 @@
 			</ul>
 		</div>
 
-		<div class="newsletter"></div>
+		<div class="newsletter">
+			<h2>Signup for exclusive deals</h2>
+			<p>Sign up to our newsletter to stay up to date on new arrivals and get exclusive offers. You can cancel at any time.</p>
+
+			<?php
+			echo do_shortcode('[wpforms id=2369]');
+			?>
+		</div>
 
 		<div class="legals">
 			<ul>
 				<li>&copy; Rude by Designs <?php echo date("Y"); ?>, all rights reserved.</li>
-				<li><a href="/privacy">Privacy policy</a></li>
-				<li><a href="/terms">Terms of service</a></li>
-				<li><a href="/wp-sitemap.xml">Sitemap</a></li>
+				<li>
+					<a class="facebook" href="https://www.facebook.com/rudebydesignuk" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="16" height="16" focusable="false" aria-hidden="true">
+							<path fill-rule="evenodd" d="M28.848 50V24.997h6.902l.915-8.616h-7.817l.012-4.313c0-2.247.214-3.45 3.441-3.45h4.315V0h-6.903c-8.291 0-11.21 4.18-11.21 11.209v5.173h-5.168v8.616h5.168V50h10.345Z" clip-rule="evenodd"></path>
+						</svg>
+					</a>
+				</li>
 				<li><a href="https://wilderbydesign.co.uk/">Gifts for animal lovers and pet owners</a></li>
 			</ul>
 		</div>
