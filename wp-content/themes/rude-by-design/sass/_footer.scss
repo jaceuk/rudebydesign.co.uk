@@ -1,6 +1,6 @@
 .footer {
   clear: both;
-  background: var(--c-grey);
+  background: var(--c-grey-pale);
   padding: var(--scale-16-32) 0;
 
   .inner-wrapper {
@@ -27,11 +27,15 @@
       display: flex;
       align-items: center;
       gap: var(--scale-8-16);
-      flex-direction: column;
+      flex-direction: row;
+    }
+  }
 
-      @media (min-width: 768px) {
-        flex-direction: row;
-      }
+  .footer-menu {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
     }
   }
 
@@ -45,5 +49,12 @@
     svg {
       fill: var(--c-white);
     }
+  }
+}
+
+.page:not(.woocommerce-account) .newsletter {
+  h2,
+  p {
+    margin: 0;
   }
 }

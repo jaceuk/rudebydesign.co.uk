@@ -4,7 +4,11 @@ html {
 }
 
 body {
-  background: var(--c-grey-pale);
+  background-color: var(--c-white);
+
+  &.dialog-visible {
+    overflow: hidden;
+  }
 }
 
 main.inner-wrapper {

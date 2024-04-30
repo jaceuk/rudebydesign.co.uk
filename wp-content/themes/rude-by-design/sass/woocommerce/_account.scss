@@ -1,14 +1,4 @@
 .woocommerce-account {
-  form {
-    display: grid;
-    gap: var(--scale-16-32);
-
-    &.search-form {
-      display: flex;
-      gap: 0;
-    }
-  }
-
   .u-column1,
   .u-column2 {
     display: grid;
@@ -38,7 +28,8 @@
   }
 
   button {
-    background: var(--c-accent);
+    background: var(--c-nearly-black);
+    color: var(--c-white);
   }
 
   form.woocommerce-form-login {
@@ -150,6 +141,28 @@
 
   .shop_table td:first-child {
     border-top: none;
+  }
+
+  .shop_table th {
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .woocommerce-button {
+    padding: var(--s-8) var(--scale-8-16);
+    font-size: var(--fs-small);
+  }
+
+  strong {
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .woocommerce-EditAccountForm {
+    display: grid;
+    gap: var(--s-16);
+
+    fieldset {
+      margin: var(--s-16) 0 0 0;
+    }
   }
 }
 

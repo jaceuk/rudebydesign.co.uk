@@ -10,7 +10,7 @@
 
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.16');
+	define('_S_VERSION', '2');
 }
 
 /**
@@ -84,6 +84,24 @@ function rude_by_design_content_width()
 add_action('after_setup_theme', 'rude_by_design_content_width', 0);
 
 /**
+ * Add support for menus.
+ *
+ */
+add_theme_support('menus');
+
+add_action('init', 'register_my_menus');
+
+function register_my_menus()
+{
+	register_nav_menus(
+		array(
+			'home-and-living-menu' => __('Home & Living Menu'),
+			'clothing-menu' => __('Clothing Menu')
+		)
+	);
+}
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -138,6 +156,8 @@ if (class_exists('WooCommerce')) {
 function fb_opengraph()
 {
 	global $post;
+
+	if (!$post) return;
 
 	if (is_product() || is_product_category()) {
 		if (has_post_thumbnail($post->ID)) {

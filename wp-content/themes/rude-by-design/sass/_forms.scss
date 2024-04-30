@@ -19,10 +19,6 @@ form {
     padding-right: var(--s-32);
   }
 
-  label {
-    font-weight: var(--fw-semi-bold);
-  }
-
   .required {
     color: var(--c-error);
   }
@@ -43,10 +39,11 @@ input[type='submit'] {
   border: 2px solid var(--c-button-border);
   background-color: var(--c-accent);
   color: var(--c-nearly-black);
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-medium);
   height: fit-content;
   display: inline-block;
   outline-offset: -2px;
+  cursor: pointer;
 }
 
 .search-form {
@@ -55,7 +52,7 @@ input[type='submit'] {
   overflow: hidden;
 
   input {
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-light);
     border: none;
 
     &[type='search'] {

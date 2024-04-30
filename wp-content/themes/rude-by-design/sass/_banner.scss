@@ -1,200 +1,21 @@
 .strapline-wrapper {
+  background: var(--c-white);
+
   .strapline {
     border-radius: var(--border-radius-small);
     padding: var(--scale-16-32) 0;
     color: var(--c-nearly-black);
 
     h1 {
-      font-size: var(--fs-h3);
+      font-size: var(--fs-h2);
 
       @media (min-width: 768px) {
-        font-size: var(--fs-h2);
+        font-size: var(--fs-h1);
       }
     }
 
     p {
       margin: 0 !important;
-    }
-
-    .button {
-      background-color: var(--c-secondary-button);
-      margin: 0 0 0 auto;
-    }
-  }
-
-  &.sale {
-    background: var(--c-christmas-red);
-
-    h1,
-    p {
-      color: var(--c-white);
-    }
-
-    .strapline {
-      padding: var(--scale-8-16) 0;
-    }
-  }
-}
-
-.banner {
-  margin: var(--scale-16-32) 0;
-}
-
-.notice {
-  background: var(--c-warning-pale);
-  padding: var(--scale-8-16) 0;
-  text-align: center;
-  color: var(--c-warning-dark);
-}
-
-.general-banner-wrapper {
-  background: var(--c-white);
-  border-radius: var(--border-radius-small);
-
-  .general-banner {
-    background: var(--c-white);
-    background-image: url(images/banner.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 50%;
-    border-radius: var(--border-radius-small);
-    padding: var(--scale-16-32) var(--scale-16-32) var(--scale-16-32) 50%;
-    display: grid;
-    gap: var(--scale-16-32);
-
-    @media (min-width: 768px) {
-      background-position: 3.2rem center;
-      background-size: 40%;
-    }
-
-    h1 {
-      font-size: var(--fs-h3);
-
-      @media (min-width: 768px) {
-        font-size: var(--fs-h2);
-      }
-    }
-
-    .button {
-      background-color: var(--c-secondary-button);
-      margin: 0 0 0 auto;
-    }
-  }
-}
-
-.christmas-banner-wrapper {
-  background-image: url(images/christmas-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: right -400px;
-  border-radius: var(--border-radius-small);
-
-  .christmas-banner {
-    background-image: url(images/christmas-mug.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 50%;
-    border-radius: var(--border-radius-small);
-    padding: var(--scale-16-32) var(--scale-16-32) var(--scale-16-32) 50%;
-    display: grid;
-    gap: var(--scale-16-32);
-    z-index: 10;
-    position: relative;
-
-    @media (min-width: 768px) {
-      background-position: 3.2rem center;
-      background-size: 40%;
-    }
-
-    h1 {
-      font-size: var(--fs-h4);
-      color: var(--c-white);
-      text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8),
-        0px 4px 4px rgba(0, 0, 0, 0.25);
-
-      @media (min-width: 768px) {
-        font-size: var(--fs-h2);
-      }
-    }
-
-    .button {
-      background-color: var(--c-secondary-button);
-      margin: 0 0 0 auto;
-    }
-  }
-}
-
-.star-signs-banner-wrapper {
-  background: var(--c-white);
-  border-radius: var(--border-radius-small);
-
-  .star-signs-banner {
-    background-image: url(images/star-signs-cartoons.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 50%;
-    border-radius: var(--border-radius-small);
-    padding: var(--scale-16-32) var(--scale-16-32) var(--scale-16-32) 50%;
-    display: grid;
-    gap: var(--scale-16-32);
-    z-index: 10;
-    position: relative;
-
-    @media (min-width: 768px) {
-      background-position: 3.2rem center;
-      background-size: 40%;
-    }
-
-    h1 {
-      font-size: var(--fs-h4);
-      font-weight: var(--fw-regular);
-
-      @media (min-width: 768px) {
-        font-size: var(--fs-h3);
-      }
-
-      @media (min-width: 1000px) {
-        font-size: 3.2rem;
-      }
-    }
-
-    .button {
-      background-color: var(--c-secondary-button);
-      margin: 0 0 0 auto;
-    }
-  }
-}
-
-.insult-photo-banner-wrapper {
-  background: linear-gradient(0deg, var(--c-grey) 0%, var(--c-white) 100%);
-  border-radius: var(--border-radius-small);
-
-  .insult-photo-banner {
-    background-image: url(images/insult-photo-mug.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 50%;
-    border-radius: var(--border-radius-small);
-    padding: var(--scale-16-32) var(--scale-16-32) var(--scale-16-32) 50%;
-    display: grid;
-    gap: var(--scale-16-32);
-    z-index: 10;
-    position: relative;
-
-    @media (min-width: 768px) {
-      background-position: 3.2rem center;
-      background-size: 40%;
-    }
-
-    h1 {
-      font-size: var(--fs-h4);
-
-      @media (min-width: 768px) {
-        font-size: var(--fs-h3);
-      }
-
-      @media (min-width: 1000px) {
-        font-size: 3.2rem;
-      }
     }
 
     .button {

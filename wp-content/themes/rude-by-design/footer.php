@@ -1,13 +1,7 @@
-<?php
-// if (is_home() || is_front_page()) {
-// 	get_template_part('components/star-signs-banner');
-// }
-?>
-
 <footer class="footer">
 	<div class="inner-wrapper">
 		<div class="footer-menu">
-			<div class="h5">Rude by Design</div>
+			<div class="h3">Rude by Design</div>
 			<ul>
 				<li><a href="/">Homepage</a></li>
 				<li><a href="/privacy">Privacy policy</a></li>
@@ -17,7 +11,7 @@
 		</div>
 
 		<div class="footer-menu">
-			<div class="h5">Support</div>
+			<div class="h3">Support</div>
 			<ul>
 				<li><a href="/contact">Contact us</a></li>
 				<li><a href="/faq">FAQ</a></li>
@@ -26,18 +20,20 @@
 			</ul>
 		</div>
 
+
+
 		<div class="newsletter">
 			<h2>Signup for exclusive deals</h2>
 			<p>Sign up to our newsletter to stay up to date on new arrivals and get exclusive offers. You can cancel at any time.</p>
 
 			<?php
-			echo do_shortcode('[wpforms id=2369]');
+			echo do_shortcode('[wpforms id=680]');
 			?>
 		</div>
 
 		<div class="legals">
 			<ul>
-				<li>&copy; Rude by Designs <?php echo date("Y"); ?>, all rights reserved.</li>
+				<li>&copy; Rude by Design <?php echo date("Y"); ?>, all rights reserved.</li>
 				<li>
 					<a class="facebook" href="https://www.facebook.com/rudebydesignuk" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="16" height="16" focusable="false" aria-hidden="true">
@@ -45,7 +41,6 @@
 						</svg>
 					</a>
 				</li>
-				<li><a href="https://wilderbydesign.co.uk/">Gifts for animal lovers and pet owners</a></li>
 			</ul>
 		</div>
 	</div>

@@ -3,32 +3,41 @@
 /**
  * Template Name: Home
  */
-?>
 
-<?php
 get_header();
-?>
 
-<?php
 defined('ABSPATH') || exit;
 get_header('shop');
-do_action('woocommerce_before_main_content');
-
-
 ?>
 
-<h2 class="section-heading">Featured gifts</h2>
+<main>
 
-<?php
-echo do_shortcode('[products limit="8" columns="4" orderby="id" order="DESC" visibility="featured"]');
-?>
+  <section class="home-section hero-section">
+    <div class="inner-wrapper">
+      <?php the_title('<h1 class="hero">', '</h1>'); ?>
+      <img class="hero-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero.jpg" alt="" />
+    </div>
+  </section>
 
-<h2 class="section-heading">Best sellers</h2>
+  <section class="home-section personalisation-section">
+    <div class="inner-wrapper">
+      <h2 class="underline">Featured Gifts</h2>
+      <?php
+      echo do_shortcode('[products limit="8" columns="4" orderby="id" order="DESC" visibility="featured"]');
+      ?>
+    </div>
+  </section>
 
-<?php
-echo do_shortcode('[products limit="8" columns="4" orderby="popularity" best_selling="true"]');
-?>
 
+
+  <section class="home-section category-section">
+    <div class="inner-wrapper">
+      <h2 class="underline">Best Sellers</h2>
+      <?php
+      echo do_shortcode('[products limit="8" columns="4" orderby="popularity" best_selling="true"]');
+      ?>
+    </div>
+  </section>
 </main>
 
 <?php

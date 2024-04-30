@@ -25,11 +25,12 @@ li.product {
   text-align: center;
   position: relative;
   align-items: flex-start;
+  margin-bottom: var(--scale-8-16);
 
   img {
     width: 100%;
     height: fit-content;
-    border: 1px solid var(--c-grey-pale);
+    border: 1px solid var(--c-grey);
     border-radius: var(--border-radius-small);
   }
 
@@ -45,8 +46,7 @@ li.product {
   }
 
   .woocommerce-loop-product__title {
-    font-size: var(--fs-small);
-    font-weight: var(--fw-regular);
+    font-size: var(--fs-h4);
   }
 
   .star-rating {
@@ -55,7 +55,7 @@ li.product {
 
   .price {
     font-size: var(--fs-body);
-    font-weight: var(--fw-semi-bold);
+    font-weight: var(--fw-medium);
 
     ins {
       text-decoration: none;
@@ -72,14 +72,14 @@ li.product {
 
   .onsale {
     position: absolute;
-    top: 0;
-    padding: var(--s-8);
+    top: calc(var(--scale-8-16) * -1);
+    left: calc(var(--scale-8-16) * -1);
+    padding: var(--s-8) var(--s-16);
     background: var(--c-error-dark);
     color: var(--c-white);
-    border-top-left-radius: var(--border-radius-small);
-    border-bottom-right-radius: var(--border-radius-small);
+    border-radius: 100px;
     font-size: var(--fs-small);
-    font-weight: var(--fw-semi-bold);
+    font-weight: var(--fw-medium);
   }
 }
 
@@ -109,7 +109,7 @@ li.product {
     height: fit-content;
     display: inline-block;
     outline-offset: -2px;
-    font-weight: var(--fw-semi-bold);
+    font-weight: var(--fw-medium);
     text-decoration: none;
   }
 }
@@ -170,7 +170,7 @@ li.product {
     gap: var(--s-8);
 
     label {
-      font-weight: var(--fw-regular);
+      font-weight: var(--fw-light);
     }
   }
 }
@@ -319,7 +319,7 @@ p.stars {
     display: inline-block;
     outline-offset: -2px;
     text-decoration: none;
-    font-weight: var(--fw-semi-bold);
+    font-weight: var(--fw-medium);
     margin-top: var(--scale-16-32);
   }
 }
@@ -327,4 +327,14 @@ p.stars {
 del {
   text-decoration: line-through;
   color: var(--c-error-dark);
+}
+
+// archive product personalisation notice
+.archive-img-wrap {
+  position: relative;
+}
+
+.personalisation-notice {
+  font-size: var(--fs-small);
+  padding-top: var(--s-8);
 }

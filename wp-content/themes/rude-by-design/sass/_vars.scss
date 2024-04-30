@@ -3,6 +3,7 @@
   --s-4: 0.4rem;
   --s-8: 0.8rem;
   --s-16: 1.6rem;
+  --s-18: 1.8rem;
   --s-24: 2.4rem;
   --s-32: 3.2rem;
   --s-64: 6.4rem;
@@ -27,12 +28,13 @@
   --c-grey: #e9e9ec;
   --c-grey-pale: #f4f4f5;
   --c-grey-med: #d7d7db;
+  --c-grey-dark: #7b7b7b;
   --c-nearly-black: #151922;
   --c-black: #000;
   --c-white: #fff;
 
-  --c-accent: #b1bcfa;
-  --c-accent-pale: #e3e7fc;
+  --c-accent: #fff7eb;
+  --c-accent-pale: #fff7eb;
 
   --c-primary-button: #ffa41c;
   --c-secondary-button: #ffd814;
@@ -66,10 +68,12 @@
   --c-warning-pale: #fff7eb;
 
   /* font size */
-  --fs-h1-hero: clamp(5.2rem, 2.6182rem + 5.8182vw, 9.6rem);
-  --fs-h1: clamp(3.2rem, 1.7455rem + 3.8788vw, 5.2rem);
+  /* based on viewport fom min 375px to max 1400px */
+  /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport */
+  --fs-h1-hero: clamp(3rem, 1.7561rem + 3.3171vw, 6.4rem);
+  --fs-h1: clamp(2.8rem, 2.0958rem + 1.8779vw, 4.8rem);
   --fs-h2: clamp(2.2rem, 1.5636rem + 1.697vw, 3.6rem);
-  --fs-h3: clamp(1.8rem, 1.5273rem + 0.7273vw, 2.4rem);
+  --fs-h3: clamp(1.8rem, 1.5273rem + 0.7273vw, 3rem);
   --fs-h4: clamp(1.6rem, 1.4182rem + 0.4848vw, 2rem);
   --fs-body: clamp(1.4rem, 1.2182rem + 0.4848vw, 1.8rem);
   --fs-nav: clamp(1.4rem, 1.2182rem + 0.4848vw, 1.8rem);
