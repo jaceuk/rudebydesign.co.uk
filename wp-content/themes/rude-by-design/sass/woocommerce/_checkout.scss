@@ -343,6 +343,10 @@
       gap: var(--s-8);
     }
 
+    .form-row.woocommerce-SavedPaymentMethods-saveNew {
+      padding-top: 16px;
+    }
+
     #wc-woocommerce_payments-new-payment-method {
       width: 2.4rem !important;
       height: 2.4rem;
@@ -381,6 +385,10 @@
   }
 
   .payment_box {
+    width: 100%;
+  }
+
+  label[for='payment_method_woocommerce_payments'] {
     width: 100%;
   }
 }
