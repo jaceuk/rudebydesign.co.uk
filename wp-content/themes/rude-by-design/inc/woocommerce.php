@@ -159,3 +159,4 @@ require get_template_directory() . '/inc/product-custom-fields.php';
 require get_template_directory() . '/inc/archive-changes.php';
 require get_template_directory() . '/inc/single-changes.php';
 require get_template_directory() . '/inc/order-confirmation-changes.php';
+require get_template_directory() . '/inc/checkout-changes.php';

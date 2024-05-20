@@ -65,22 +65,30 @@ document.onclick = function (e) {
 };
 
 // personalisation dialog
-const personalisationOpenButtons = document.querySelectorAll(
-  '.personalisation-dialog-open-button'
-);
-const personalisationDialog = document.querySelector('#personalisation-dialog');
-const personalisationCloseButton = document.querySelector(
-  '#personalisation-dialog-close-button'
-);
+// const personalisationOpenButtons = document.querySelectorAll(
+//   '.personalisation-dialog-open-button'
+// );
+// const personalisationDialog = document.querySelector('#personalisation-dialog');
+// const personalisationCloseButton = document.querySelector(
+//   '#personalisation-dialog-close-button'
+// );
 
-personalisationOpenButtons.forEach((personalisationOpenButton) => {
-  personalisationOpenButton.addEventListener('click', () => {
-    personalisationDialog.showModal();
-    document.body.classList.add('dialog-visible');
-  });
-});
+// personalisationOpenButtons.forEach((personalisationOpenButton) => {
+//   personalisationOpenButton.addEventListener('click', () => {
+//     personalisationDialog.showModal();
+//     document.body.classList.add('dialog-visible');
+//   });
+// });
 
-personalisationCloseButton.addEventListener('click', () => {
-  personalisationDialog.close();
-  document.body.classList.remove('dialog-visible');
-});
+// personalisationCloseButton.addEventListener('click', () => {
+//   personalisationDialog.close();
+//   document.body.classList.remove('dialog-visible');
+// });
+
+// checkout page
+const shippingAddressContainer = document.querySelector('.shipping_address');
+const div = document.createElement('h3');
+
+div.innerHTML = 'Shipping address';
+
+shippingAddressContainer.insertBefore(div, shippingAddressContainer.firstChild);
