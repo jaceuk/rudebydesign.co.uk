@@ -5,6 +5,21 @@
     overflow: hidden;
   }
 
+  .upsell {
+    background: var(--c-accent-pale);
+    border: 1px solid var(--c-button-border);
+    color: var(--c-nearly-black);
+    margin-bottom: var(--scale-16-32);
+    border-radius: var(--border-radius-small);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--scale-16-32);
+    padding: var(--scale-8-16);
+    overflow: hidden;
+  }
+
   div.product {
     display: grid;
     grid-template-columns: 1fr;

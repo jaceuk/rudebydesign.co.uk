@@ -74,3 +74,11 @@ function woo_remove_product_tabs($tabs)
   unset($tabs['additional_information']);
   return $tabs;
 }
+
+// 'large mug' upsell message after buy button
+function add_content_after_addtocart_button_func()
+{
+  if (has_term(array('mugs'), 'product_cat'))
+    echo '<div class="upsell">Stand out from the mug crowd with our super-sized 20oz mugs!</div>';
+}
+add_action('woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func');
