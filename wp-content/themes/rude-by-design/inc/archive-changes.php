@@ -36,3 +36,10 @@ function new_loop_shop_per_page($cols)
   $cols = 16;
   return $cols;
 }
+
+// change default sort order to 'latest'
+add_filter('woocommerce_default_catalog_orderby', 'misha_default_catalog_orderby');
+function misha_default_catalog_orderby($sort_by)
+{
+  return 'popularity';
+}
