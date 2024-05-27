@@ -59,6 +59,14 @@
       }
     }
   }
+
+  &.products-section {
+    margin: 0;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
 }
 
 .col-2 {

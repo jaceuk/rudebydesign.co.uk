@@ -19,7 +19,12 @@ get_header('shop');
     </div>
   </section>
 
-  <section class="home-section personalisation-section">
+  <?php
+  get_template_part('components/personalised-callout');
+  ?>
+
+
+  <section class="home-section products-section">
     <div class="inner-wrapper">
       <h2 class="underline">Featured Gifts</h2>
       <?php
@@ -28,9 +33,7 @@ get_header('shop');
     </div>
   </section>
 
-
-
-  <section class="home-section category-section">
+  <section class="home-section products-section">
     <div class="inner-wrapper">
       <h2 class="underline">Best Sellers</h2>
       <?php
