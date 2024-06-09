@@ -20,6 +20,25 @@ get_header('shop');
   </section>
 
   <?php
+  $collections = get_field_object('collections');
+  if ($collections) {
+  ?>
+    <section class="home-section personalisation-section">
+      <div class="inner-wrapper">
+        <h2 class="underline">Featured Collections</h2>
+        <div class="col-2">
+          <?php
+          get_template_part('components/collection-card', null, $collections);
+          ?>
+        </div>
+      </div>
+      </div>
+    </section>
+  <?php
+  }
+  ?>
+
+  <?php
   get_template_part('components/personalised-callout');
   ?>
 
