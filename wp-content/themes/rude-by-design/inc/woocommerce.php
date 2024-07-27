@@ -155,6 +155,19 @@ function disable_woo_commerce_sidebar()
 }
 add_action('init', 'disable_woo_commerce_sidebar');
 
+// add review under 'place order' button
+function get_review()
+{
+	$html = '<ul>';
+	$html .= '<li class="review">';
+	$html .= wc_get_rating_html(5);
+	$html .= '<div class="review-text">Great design and excellent quality. Highly recommended.</div>';
+	$html .= '<div class="review-author">A Fresier</div>';
+	$html .= '</li>';
+	echo $html . '</ul>';
+}
+add_action('woocommerce_review_order_after_submit', 'get_review', 10);
+
 require get_template_directory() . '/inc/product-custom-fields.php';
 require get_template_directory() . '/inc/archive-changes.php';
 require get_template_directory() . '/inc/single-changes.php';
