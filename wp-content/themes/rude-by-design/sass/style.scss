@@ -1,9 +1,9 @@
 /*!
-Theme Name: Rude by Design
+Theme Name: Wilder by Design
 Author:
 Author URI:
 Description:
-Version: 1.0.1
+Version: 2.0.0
 */
 
 @import 'reset';
@@ -17,6 +17,7 @@ Version: 1.0.1
 @import 'buttons';
 @import 'forms';
 @import 'home';
+@import 'collections';
 @import 'page';
 @import 'cookie-notice';
 @import 'banner';
@@ -25,6 +26,7 @@ Version: 1.0.1
 @import 'global';
 
 @import 'wpforms';
+@import 'lightweight-accordion';
 @import 'mailpoet';
 
 @import 'woocommerce/woocommerce';

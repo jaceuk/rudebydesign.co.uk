@@ -9,8 +9,9 @@ h4,
 h5,
 .h5 {
   line-height: 1.25;
-  font-family: 'Gotu', sans-serif;
-  font-weight: var(--fw-regular);
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--fw-bold);
+  max-width: var(--max-readable-width);
 }
 
 html {
@@ -25,7 +26,7 @@ body {
 body,
 .body {
   font-size: var(--fs-body);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-regular);
 }
 
 label,
@@ -82,4 +83,13 @@ h5,
 .hero {
   font-size: var(--fs-h1-hero);
   line-height: 1;
+}
+
+.super {
+  font-size: var(--fs-h1-super);
+  line-height: 1;
+}
+
+p {
+  max-width: var(--max-readable-width);
 }

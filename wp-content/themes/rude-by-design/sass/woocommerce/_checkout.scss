@@ -10,6 +10,12 @@
     overflow: auto;
     clear: both;
 
+    input[type='checkbox'],
+    input[type='radio'] {
+      width: 2.4rem !important;
+      height: 2.4rem !important;
+    }
+
     .col2-set {
       float: none;
       width: 100%;
@@ -309,6 +315,10 @@
     .place-order {
       display: grid;
       gap: var(--scale-16-32);
+
+      .form-row {
+        margin: 0;
+      }
     }
 
     label[for='payment_method_woocommerce_payments']
@@ -355,6 +365,7 @@
 
     #wcpay-payment-request-button-separator {
       margin: var(--scale-16-32);
+      max-width: 100%;
     }
 
     &.processing {
@@ -417,4 +428,31 @@
 
 #wcpay-payment-request-button-separator {
   margin-bottom: var(--scale-16-32) !important;
+}
+
+.review {
+  border: 1px solid var(--c-primary-button);
+  padding: var(--scale-8-16);
+  border-radius: var(--border-radius-small);
+
+  .review-author {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-small);
+  }
+}
+
+.woocommerce-privacy-policy-text {
+  padding-bottom: var(--scale-16-32);
+}
+
+#mailpoet_woocommerce_checkout_optin_present_field {
+  display: none;
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+  display: none;
+}
+
+wc-order-attribution-inputs {
+  display: none;
 }

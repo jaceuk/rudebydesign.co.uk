@@ -1,24 +1,12 @@
 .header {
-  box-shadow: var(--box-shadow-menu);
   padding: var(--scale-16-32) 0 0 0;
-  background: var(--c-nearly-black);
+  background: var(--c-white);
   position: relative;
+  z-index: 20;
+  box-shadow: var(--box-shadow-menu);
 
-  .currency-switcher {
-    display: flex;
-    flex-direction: row;
-    gap: var(--scale-8-16);
-    align-items: center;
-    color: var(--c-accent);
-
-    select[name='currency'] {
-      padding: var(--s-8) var(--s-32) var(--s-8) var(--s-8) !important;
-      color: var(--c-nearly-black) !important;
-
-      option {
-        color: var(--c-nearly-black);
-      }
-    }
+  @media (min-width: 768px) {
+    box-shadow: none;
   }
 
   a {
@@ -30,7 +18,7 @@
       display: grid;
       gap: var(--scale-16-32);
       grid-template-columns: auto 1fr auto;
-      padding-bottom: var(--scale-16-32);
+      padding-bottom: var(--scale-8-16);
     }
 
     .account-and-basket {
@@ -61,10 +49,10 @@
 
   .logo {
     height: 49px;
-    fill: var(--c-white);
+    fill: var(--c-nearly-black);
 
     @media (min-width: 768px) {
-      height: 55px;
+      height: 52px;
     }
   }
 
@@ -85,6 +73,7 @@
     svg {
       height: 32px;
       width: 32px;
+      fill: var(--c-nearly-black);
     }
 
     @media (min-width: 768px) {
@@ -115,12 +104,16 @@
 .nav {
   display: none;
   background: var(--c-white);
+  box-shadow: var(--box-shadow-menu);
+  z-index: 10;
 
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
   }
 
   .inner-wrapper {
@@ -133,6 +126,23 @@
     color: var(--c-accent);
   }
 
+  .currency-switcher {
+    display: flex;
+    flex-direction: row;
+    gap: var(--scale-8-16);
+    align-items: center;
+    color: var(--c-accent);
+
+    select[name='currency'] {
+      padding: var(--s-8) var(--s-32) var(--s-8) var(--s-8) !important;
+      color: var(--c-nearly-black) !important;
+
+      option {
+        color: var(--c-nearly-black);
+      }
+    }
+  }
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -143,6 +153,8 @@
 
     a {
       padding: var(--scale-8-16) 0;
+      text-decoration: none;
+      display: flex;
     }
 
     ul {
@@ -207,12 +219,11 @@ nav.account-and-basket {
       display: grid;
       justify-items: center;
       gap: var(--s-4);
-      font-weight: var(--fw-light);
-      color: var(--c-white);
+      color: var(--c-nearly-black);
       position: relative;
 
       svg {
-        fill: var(--c-white);
+        fill: var(--c-nearly-black);
         width: 24px;
         height: 24px;
       }
@@ -227,7 +238,8 @@ nav button {
 }
 
 .badge {
-  background: red;
+  background: var(--c-error-dark);
+  color: var(--c-white);
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 100%;
