@@ -325,8 +325,13 @@ p.stars {
 }
 
 del {
-  text-decoration: line-through;
   color: var(--c-error-dark);
+  display: block;
+  font-size: var(--fs-small);
+
+  bdi {
+    font-size: var(--fs-small);
+  }
 }
 
 // archive product personalisation notice
