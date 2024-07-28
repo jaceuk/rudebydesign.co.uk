@@ -85,10 +85,57 @@ document.onclick = function (e) {
 //   document.body.classList.remove('dialog-visible');
 // });
 
-// checkout page
-const shippingAddressContainer = document.querySelector('.shipping_address');
-const div = document.createElement('h3');
+// hook variations buttons up to the original select lists
+const variationButtons = document.querySelectorAll('.variation-button');
 
-div.innerHTML = 'Shipping address';
+variationButtons.forEach((variationButton) => {
+  const variationName = variationButton.dataset.name;
+  const variationValue = variationButton.dataset.value;
+  const select = document.querySelector(
+    'select[name = "' + variationName + '"]'
+  );
 
-shippingAddressContainer.insertBefore(div, shippingAddressContainer.firstChild);
+  // select the button if the variation is preselected on load
+  if (variationValue === select.value) {
+    variationButton.classList.add('selected');
+  }
+
+  variationButton.addEventListener('click', function () {
+    // stop button from submitting the form
+    event.preventDefault();
+
+    // clear selected class from all variation buttons
+    variationButtons.forEach((variationButton) => {
+      const name = variationButton.dataset.name;
+
+      if (name === variationName) {
+        variationButton.classList.remove('selected');
+      }
+    });
+
+    // add selected class to selected variation
+    variationButton.classList.add('selected');
+
+    // chage the select list to match the selected variation
+    select.value = variationValue;
+    // trigger the change event on the select list to update the ui
+    jQuery(select).trigger('change');
+
+    // update label with selected variation
+    const variationLabels = document.querySelectorAll('.label');
+    variationLabels.forEach((variationLabel) => {
+      const variationLabelText = variationLabel.innerText.toLowerCase();
+      const trimmedVariationName = variationName.replace('attribute_pa_', '');
+      let trimmedVariationValue = variationValue.replace(/-/g, ' ');
+
+      if (trimmedVariationName === 'size')
+        trimmedVariationValue = trimmedVariationValue.toUpperCase();
+
+      if (variationLabelText.includes(trimmedVariationName)) {
+        variationLabel.innerText =
+          trimmedVariationName + ': ' + trimmedVariationValue;
+        variationLabel.classList.add('selected');
+      }
+    });
+  });
+});
