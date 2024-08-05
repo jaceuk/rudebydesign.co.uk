@@ -1,27 +1,10 @@
 <ul>
+  <li class="mobile-currency-switcher"><?php dynamic_sidebar('currency-switcher'); ?></li>
   <li><a href="/">Home</a></li>
-  <li><span class="title">Clothing</span>
-    <ul>
-      <?php
-      get_template_part('components/clothing-menu-items');
-      ?>
-    </ul>
-  </li>
+  <li><a href="/product-category/mugs/">Mugs</a></li>
+  <li><a href="/product-category/t-shirts/">T-shirts</a></li>
+  <li><a href="/product-category/coasters/">Coasters</a></li>
 
-  <li><span class="title">Home & Living</span>
-    <ul>
-      <?php
-      get_template_part('components/home-living-menu-items');
-      ?>
-    </ul>
-  </li>
-
-  <li><span class="title">Shop by animal</span>
-    <ul>
-      <?php
-      get_template_part('components/animal-menu-items');
-      ?>
-    </ul>
 
   <li><span class="title">Support</span>
     <ul>
