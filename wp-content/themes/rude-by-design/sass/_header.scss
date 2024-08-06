@@ -128,19 +128,6 @@
 
   .currency-switcher {
     display: flex;
-    flex-direction: row;
-    gap: var(--scale-8-16);
-    align-items: center;
-    color: var(--c-accent);
-
-    select[name='currency'] {
-      padding: var(--s-8) var(--s-32) var(--s-8) var(--s-8) !important;
-      color: var(--c-nearly-black) !important;
-
-      option {
-        color: var(--c-nearly-black) !important;
-      }
-    }
   }
 
   .menu {
@@ -288,14 +275,5 @@ nav button {
 
 .mobile-currency-switcher .widget {
   margin-left: auto;
-
-  select[name='currency'] {
-    padding: var(--s-8) var(--s-32) var(--s-8) var(--s-8) !important;
-    color: var(--c-nearly-black) !important;
-    border-color: var(--c-nearly-black) !important;
-
-    option {
-      color: var(--c-nearly-black) !important;
-    }
-  }
+  width: fit-content;
 }
